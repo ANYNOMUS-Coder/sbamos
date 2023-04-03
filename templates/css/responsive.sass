@@ -1,0 +1,367 @@
+@import slick
+
+=filter($filter_mode)
+    -webkit-filter: $filter_mode
+    -moz-filter: $filter_mode
+    -ms-filter: $filter_mode
+    -o-filter: $filter_mode
+    filter: $filter_mode
+
+=text-stroke-width($tstrokewidth)
+    -webkit-text-stroke-width: $tstrokewidth
+    -moz-text-stroke-width: $tstrokewidth
+    -ms-text-stroke-width: $tstrokewidth
+    -o-text-stroke-width: $tstrokewidth
+
+=text-stroke-color($tstrokecolor)
+    -webkit-text-stroke-color: $tstrokecolor
+    -moz-text-stroke-color: $tstrokecolor
+    -ms-text-stroke-color: $tstrokecolor 
+    -o-text-stroke-color: $tstrokecolor	
+
+=box-sizing($box)
+    -webkit-box-sizing: $box
+    -moz-box-sizing: $box
+    -ms-box-sizing: $box
+    -o-box-sizing: $box
+    webkit-box-sizing: $box
+
+=border-radius($round)
+    -webkit-border-radius: $round
+    -moz-border-radius: $round
+    -ms-border-radius: $round
+    border-radius: $round
+
+=transform($trans)
+    -webkit-transform: $trans
+    -moz-transform: $trans
+    -ms-transform: $trans
+    transform: $trans
+
+=transition($smooth)
+    -webkit-transition: $smooth
+    -moz-transition: $smooth
+    -o-transition: $smooth
+    transition: $smooth
+
+=appearance($appr)
+    -webkit-appearance: $appr
+    -moz-appearance: $appr
+    -o-appearance: $appr
+    appearance: $appr
+
+=box-shadow($bbs)
+    -webkit-box-shadow: $bbs
+    -moz-box-shadow: $bbs
+    -o-box-shadow: $bbs
+    box-shadow: $bbs
+
+=text-shadow($tbbs)
+    -webkit-text-shadow: $tbbs
+    -moz-text-shadow: $tbbs
+    -o-text-shadow: $tbbs
+    text-shadow: $tbbs
+
+$deep-black: #000000
+$black: #24282A
+$white: #ffffff
+$pink: #F02A64
+$blue: #0D2958
+$light_blue: #017DA9
+$red: #F74612
+$sky: #b7bfd2
+$text_color: #727272
+$d_blue: #012B37
+$dark: #2D2D2D
+$mid_dark: #45464a
+$black_shade: #110f10
+$black_shadow: rgba(0,0,0,0.7)
+$black_shadow_light: rgba(0,0,0,0.1)
+$green: #00ff00
+$border_color: #E8E8E8
+$grey: #848484
+$white_shadow: rgba(255, 255, 255, 0.8)
+$white_shadow_two: rgba(255, 255, 255, 0.2)
+$input_bg: #44464a
+$copy_bg: #F5F5F5
+$blue_shadow: rgba(49,60,83,0.6)
+$table_border: #adb1ba
+$mission_bg: #d2d2d2
+$brown: #691817
+$light_gray: #9C9F9F
+$dark_brown: #581414
+$l_brown: #832727
+$light_skin_blue: #4DB7D6
+$body_color: #EEEEEE
+$brown_shade: #732F17
+$heading_color: #131313
+$icon_bg: #D9D9D9
+$ftr_brdr: #545454
+$dark_dot: #444545
+$border-color: #4C5A5F
+$yellow: #FFD33F
+$input-black: #9A9A9A
+
+$font_cabin: "Cabin"
+
+*   
+    +box-sizing(border-box)
+
+html
+    -webkit-text-size-adjust: 100%
+
+div, h1, h2, h3, h4, h5, p, ol, form, input, textarea, img, html, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    vertical-align: baseline
+
+body
+    font-size: 16px
+    line-height: 28px
+    margin: 0
+    padding: 0
+    font-family: $font_cabin
+	
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+    display: block
+
+img
+    max-width: 100%
+    height: auto
+    border: none
+    outline: none
+    display: block
+
+blockquote, q
+    quotes: none
+
+ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+    li
+        padding: 0
+        margin: 0
+
+h2
+    background: transparent
+    padding: 0
+    font-size: 34px
+    line-height: 1
+    font-weight: 700
+    color: $black
+    text-transform: capitalize
+    strong
+        color: $blue
+        font-weight: 700
+h3
+    background-color: inherit
+    padding: 0
+    margin: 0 0 5px
+    font-size: 18px
+    font-weight: 600
+    color: $blue
+h5
+    color: $white
+    font-weight: 700
+    font-size: 34px
+    line-height: 50px
+
+h1, h2, h3, h4 , h5 , h6
+    font-family: $font_cabin
+
+a
+    
+    background-color: transparent
+    outline: none
+    text-decoration: none
+    color: $black    
+    &:active, &:focus
+        text-decoration: none
+
+p
+    color: #565872
+
+.btn
+    min-width: 150px
+    background: $pink
+    color: $white
+    border: 1px solid $pink
+    padding: 18px
+    border-radius: 0 !important
+    &:hover
+        background: transparent
+        border: 1px solid $pink
+        color: $pink
+        +transition(0.3s ease-out)
+button
+    border: none
+    border-radius: 0
+
+.clear
+    &::after
+        content: ""
+        display: block
+        clear: both
+
+
+// Main-Statr
+
+// NAv
+@media screen and ( max-width: 1024px )
+    .main-header 
+        .main-start 
+            .main-nav-list
+                .nav-list
+                    display: none
+// Nav
+
+@media only screen and (min-width: 1100px) and (max-width: 1500px)
+    h5
+        font-size: 30px
+    .main-header 
+        .main-start 
+            .main-nav-list 
+                .nav-list 
+                    ul 
+                        li 
+                            a
+                                font-size: 12px
+    .home-banner 
+        .banner-content 
+            h1
+                font-size: 60px
+    .home-banner 
+        .banner-content 
+            h5
+            font-size: 30px
+            line-height: 40px
+    .voter-ve 
+        .text
+            margin: 0 auto
+            width: 70%
+    .footer-main 
+        .footer-down-ul 
+            ul
+                font-size: 12px
+    .commet 
+        .first-img 
+            margin-top: 20px
+            figure
+                height: 647px
+    .commet 
+        .sec-img 
+            margin: 20px 0
+            figure
+                height: 647px
+    
+@media only screen and (min-width: 1025px) and (max-width: 1200px)
+    h5
+        font-size: 30px
+    .main-header 
+        .main-start 
+            .main-nav-list 
+                .nav-list 
+                    ul 
+                        li 
+                            a
+                                font-size: 12px
+    .home-banner 
+        .banner-content 
+            h1
+                font-size: 60px
+            h5
+                font-size: 20px
+                line-height: 30px
+    .home-banner 
+        .banner-content 
+            h5
+            font-size: 30px
+            line-height: 40px
+    .voter-ve 
+        .text
+            margin: 0 auto
+            width: 70%
+    .footer-main 
+        .footer-down-ul 
+            ul
+                font-size: 12px
+    .commet 
+        .first-img 
+            margin-top: 20px
+            figure
+                height: 647px
+    .commet 
+        .sec-img 
+            margin: 20px 0
+            figure
+                height: 647px
+    .enterpeice 
+        .text 
+            ul
+                font-size: 18px
+                li
+                    margin-bottom: 20px
+    .enterpeice 
+        .text-item-sec 
+            margin-top: 30px
+            a
+                margin-top: 30px
+            ul
+                font-size: 18px
+                li
+                    margin-bottom: 20px
+
+@media only screen and (min-width: 768px) and (max-width: 1024px)
+    .home-banner 
+        .banner-content 
+            h1
+                font-size: 30px
+            h5
+                font-size: 18px
+                line-height: 22px
+    .voter-ve 
+        .mobole-img
+            left: 20px
+        .text 
+            width: 47%
+            margin: 0 auto
+            h5
+                font-size: 22px
+    .plans 
+        .content 
+            width: 100%
+            h5
+                font-size: 22px
+    .commet 
+        .first-img 
+            margin: 20px 0
+            figure
+                height: 470px
+        .sec-img 
+            margin-bottom: 20px
+            figure
+                height: 470px
+    .mobile-div 
+        .mobile-div-img
+            width: 100%
+            height: 340px
+            position: relative
+            img
+                position: absolute
+                left: 50%
+                +transform(translateX(-50%))
+    .flash
+        .main-flash
+            .flash-img
+                width: 100%
+                height: 500px
+                position: relative
+                margin-bottom: 20px
+                img
+                    position: absolute
+                    left: 50%
+                    +transform(translateX(-50%))

@@ -1,0 +1,4452 @@
+@import slick
+
+=filter($filter_mode)
+    -webkit-filter: $filter_mode
+    -moz-filter: $filter_mode
+    -ms-filter: $filter_mode
+    -o-filter: $filter_mode
+    filter: $filter_mode
+
+=text-stroke-width($tstrokewidth)
+    -webkit-text-stroke-width: $tstrokewidth
+    -moz-text-stroke-width: $tstrokewidth
+    -ms-text-stroke-width: $tstrokewidth
+    -o-text-stroke-width: $tstrokewidth
+
+=text-stroke-color($tstrokecolor)
+    -webkit-text-stroke-color: $tstrokecolor
+    -moz-text-stroke-color: $tstrokecolor
+    -ms-text-stroke-color: $tstrokecolor 
+    -o-text-stroke-color: $tstrokecolor	
+
+=box-sizing($box)
+    -webkit-box-sizing: $box
+    -moz-box-sizing: $box
+    -ms-box-sizing: $box
+    -o-box-sizing: $box
+    webkit-box-sizing: $box
+
+=border-radius($round)
+    -webkit-border-radius: $round
+    -moz-border-radius: $round
+    -ms-border-radius: $round
+    border-radius: $round
+
+=transform($trans)
+    -webkit-transform: $trans
+    -moz-transform: $trans
+    -ms-transform: $trans
+    transform: $trans
+
+=transition($smooth)
+    -webkit-transition: $smooth
+    -moz-transition: $smooth
+    -o-transition: $smooth
+    transition: $smooth
+
+=appearance($appr)
+    -webkit-appearance: $appr
+    -moz-appearance: $appr
+    -o-appearance: $appr
+    appearance: $appr
+
+=box-shadow($bbs)
+    -webkit-box-shadow: $bbs
+    -moz-box-shadow: $bbs
+    -o-box-shadow: $bbs
+    box-shadow: $bbs
+
+=text-shadow($tbbs)
+    -webkit-text-shadow: $tbbs
+    -moz-text-shadow: $tbbs
+    -o-text-shadow: $tbbs
+    text-shadow: $tbbs
+
+$deep-black: #000000
+$black: #24282A
+$white: #ffffff
+$pink: #F02A64
+$pink-shade: #DA2D77
+$blue: #0D2958
+$light_blue: #017DA9
+$red: #F74612
+$sky: #b7bfd2
+$text_color: #727272
+$d_blue: #012B37
+$dark: #2D2D2D
+$mid_dark: #45464a
+$black_shade: #110f10
+$black_shadow: rgba(0,0,0,0.7)
+$black_shadow_light: rgba(0,0,0,0.1)
+$green: #00ff00
+$border_color: #E8E8E8
+$grey: #848484
+$white_shadow: rgba(255, 255, 255, 0.8)
+$white_shadow_two: rgba(255, 255, 255, 0.2)
+$input_bg: #44464a
+$copy_bg: #F5F5F5
+$blue_shadow: rgba(49,60,83,0.6)
+$table_border: #adb1ba
+$mission_bg: #d2d2d2
+$brown: #691817
+$light_gray: #9C9F9F
+$dark_brown: #581414
+$l_brown: #832727
+$light_skin_blue: #4DB7D6
+$body_color: #EEEEEE
+$brown_shade: #732F17
+$heading_color: #131313
+$icon_bg: #D9D9D9
+$ftr_brdr: #545454
+$dark_dot: #444545
+$border-color: #4C5A5F
+$yellow: #FFD33F
+$yellow-shade: #FEC007
+$input-black: #9A9A9A
+$extra-blue-bg: #639ABE
+$new-bg: #F5F5EB
+$white-shde: #E9F1F3
+$new-paragraph: #7D7D7D
+
+$font_cabin: "Cabin"
+
+*   
+    +box-sizing(border-box)
+
+html
+    -webkit-text-size-adjust: 100%
+
+div, h1, h2, h3, h4, h5, p, ol, form, input, textarea, img, html, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    vertical-align: baseline
+
+body
+    font-size: 16px
+    line-height: 28px
+    margin: 0
+    padding: 0
+    font-family: $font_cabin
+	
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+    display: block
+
+img
+    max-width: 100%
+    height: auto
+    border: none
+    outline: none
+    display: block
+
+blockquote, q
+    quotes: none
+
+ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+    li
+        padding: 0
+        margin: 0
+
+h2
+    background: transparent
+    padding: 0
+    font-size: 34px
+    line-height: 1
+    font-weight: 700
+    color: $black
+    text-transform: capitalize
+    strong
+        color: $blue
+        font-weight: 700
+h3
+    background-color: inherit
+    padding: 0
+    margin: 0 0 5px
+    font-size: 18px
+    font-weight: 600
+    color: $blue
+h5
+    color: $white
+    font-weight: 700
+    font-size: 34px
+    line-height: 50px
+
+h1, h2, h3, h4 , h5 , h6
+    font-family: $font_cabin
+
+a
+    
+    background-color: transparent
+    outline: none
+    text-decoration: none
+    color: $black    
+    &:active, &:focus
+        text-decoration: none
+
+p
+    color: #565872
+
+.btn
+    min-width: 150px
+    background: $pink
+    color: $white
+    border: 1px solid $pink
+    padding: 18px
+    border-radius: 0 !important
+    &:hover
+        background: transparent
+        border: 1px solid $pink
+        color: $pink
+        +transition(0.3s ease-out)
+button
+    border: none
+    border-radius: 0
+
+.clear
+    &::after
+        content: ""
+        display: block
+        clear: both
+
+.header-text
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+    a
+        color: $pink
+        display: inline-block
+        font-size: 24px
+// Main Start
+.main-header
+    .main-start
+        background-color: $white
+        padding: 25px 0
+        .main-nav-list
+            display: flex
+            gap: 30px
+            align-items: center
+            justify-content: end
+            .nav-list
+                ul
+                    display: flex
+                    gap: 20px
+                    position: relative
+                    li
+                        a   
+                            font-size: 16px
+                            color: $black
+                            font-weight: 400
+                            +transition(0.3s)
+                            &:hover
+                                color: $pink
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 1px
+                        height: 40px
+                        background-color: $black
+                        right: -17px
+                        top: -5px
+            .premium
+                a
+                    background-color: $yellow
+                    color: $black
+                    padding: 10px 30px 10px 30px
+                    display: inline-block
+                    border-radius: 8px
+                    border: 1px solid $yellow
+                    +transition(0.3s)
+                    &:hover
+                        background-color: transparent
+            .sub-nav
+                position: fixed
+                width: 300px
+                height: 100%
+                right: 0
+                top: 0
+                z-index: 5
+                background-color: $white
+                display: none
+                .sub-nav-ul
+                    // display: none
+                    position: relative
+                    padding-left: 30px
+                    top: 115px
+                    li
+                        margin-bottom: 30px
+                        a
+                            font-size: 16px
+                            color: $black
+                            &:hover
+                                color: $pink
+                .close-btn
+                    position: absolute
+                    top: 42px
+                    left: 38px
+                    z-index: 6
+                    cursor: pointer
+                    a
+                        img
+                            width: 22px
+// Home - banner
+.home-banner
+    position: relative
+    .banner-slick-slider
+        position: relative
+        z-index: 1
+        .element
+            position: relative
+            figure
+                background-size: cover
+                background-repeat: no-repeat
+                width: 100%
+                height: 60vh
+                position: relative
+        .slick-prev
+            font-size: 0
+            position: absolute
+            background-color: rgba(154, 154, 154, 0.48)
+            background-image: url(../images/arrow-prv.svg)
+            background-repeat: no-repeat
+            background-position: center
+            left: 20px
+            z-index: 2
+            top: 50%
+            +transform(translateY(-50%))
+            width: 60px
+            height: 60px
+            border-radius: 100%
+            +transition(0.3s)
+            &:hover
+                background-color: $yellow
+        .slick-next
+            font-size: 0
+            position: absolute
+            background-color: rgba(154, 154, 154, 0.48)
+            background-image: url(../images/arrow-prv.svg)
+            background-repeat: no-repeat
+            background-position: center
+            right: 20px
+            z-index: 2
+            top: 50%
+            +transform(translateY(-50%))
+            width: 60px
+            height: 60px
+            border-radius: 100%
+            +transform(rotate(180deg))
+            +transform(translate(0.5s))
+            &:hover
+                background-color: $yellow
+    .banner-content
+        text-align: center
+        color: $white
+        position: absolute
+        top: 50%
+        left: 0
+        +transform(translateY(-50%))
+        width: 100%
+        z-index: 2
+
+        h1
+            font-size: 60px
+            font-weight: 700
+            margin-bottom: 10px
+        p
+            font-size: 24px
+            color: $white
+            margin-bottom: 20px
+// Filter
+.filter
+    top: -50px
+    position: relative
+    .filter-holder
+        position: relative
+        z-index: 2
+        #main-form
+            background-color: $white
+            padding: 25px
+            border-radius: 8px
+            box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.08)
+            display: flex
+            align-items: center
+            justify-content: center
+            .form-group
+                margin-right: 10px
+                position: relative
+                #search
+                    border: 1px solid $icon_bg
+                    font-size: 15px
+                    color: $border-color
+                    padding: 10px 10px
+                    width: 230px
+                    outline: 0
+                    position: relative
+                    border-radius: 8px
+                    &::placeholder
+                        font-size: 15px
+                        color: $icon_bg
+                .search-icon
+                    position: absolute
+                    background-color: transparent
+                    width: 18px
+                    height: 18px
+                    background-image: url(../images/Icon-Search.svg)
+                    background-repeat: no-repeat
+                    background-color: transparent
+                    right: 10px
+                    bottom: 15px
+                    border: 0
+                #category-lable
+                    position: relative
+                    #category
+                        border: 1px solid $icon_bg
+                        font-size: 15px
+                        color: $border-color
+                        padding: 10px 32px
+                        width: 180px
+                        outline: 0
+                        position: relative
+                        border-radius: 8px
+                        &::placeholder
+                            font-size: 15px
+                            color: $icon_bg
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 18px
+                        height: 18px
+                        background-image: url(../images/Icon-Category.svg)
+                        background-repeat: no-repeat
+                        left: 10px
+                        top: 16px
+                #region-lable
+                    position: relative
+                    #region
+                        border: 1px solid $icon_bg
+                        font-size: 15px
+                        color: $border-color
+                        padding: 10px 32px
+                        width: 180px
+                        outline: 0
+                        position: relative
+                        border-radius: 8px
+                        &::placeholder
+                            font-size: 15px
+                            color: $icon_bg
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 18px
+                        height: 24.01px
+                        background-image: url(../images/Icon-Region.svg)
+                        background-repeat: no-repeat
+                        left: 10px
+                        top: 14px
+                #date-lable
+                    position: relative
+                    #date
+                        border: 1px solid $icon_bg
+                        font-size: 15px
+                        color: $border-color
+                        padding: 10px 32px
+                        width: 180px
+                        outline: 0
+                        position: relative
+                        border-radius: 8px
+                        &::placeholder
+                            font-size: 15px
+                            color: $icon_bg
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 18px
+                        height: 17px
+                        background-image: url(../images/Icon-Date.svg)
+                        background-repeat: no-repeat
+                        left: 10px
+                        top: 16px
+            #recharge
+                background-color: $pink
+                color: $white
+                padding: 12px 25px
+                border-radius: 8px
+                border: 1px solid $pink
+                +transition(0.3s)
+                &:hover
+                    background-color: transparent
+                    color: $pink
+// 
+.products-main
+    margin: 0 0 90px 0
+    position: relative
+    .header-text
+        h2
+            color: $black
+            font-size: 34px
+            font-weight: 700
+        a
+            color: $pink
+            font-weight: 600
+            font-size: 24px
+            +transition(0.3s)
+            &:hover
+                opacity: 80%
+    .products-slick-slider
+        position: relative
+        .element
+            margin-right: 10px
+            position: relative
+            z-index: 1
+            padding: 0 0 30px 0
+            .figut-holder
+                figure
+                    width: 100%
+                    height: 200px
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: cover
+                    border-radius: 8px 8px 0px 0px
+            .product-text
+                border: 1px solid rgba(217, 217, 217, 0.5)
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1)
+                border-radius: 0px 0px 8px 8px
+                padding: 20px
+                margin-top: 10px
+                background-color: $white
+                +transition(0.3s)
+                h5
+                    font-size: 24px
+                    font-weight: 600
+                    color: $black
+                    line-height: 1
+                .time-date
+                    display: flex
+                    align-items: center
+                    gap: 40px
+                    color: $input-black
+                    margin: 20px 0
+                    li
+                        display: flex
+                        align-items: center
+                        gap: 5px
+                        position: relative
+                        .normal
+                            img
+                                display: block
+                                +transition(0.3s)
+                        .hover-img
+                            img
+                                display: none
+                                +transition(0.3s)
+                        &::after
+                            content: ""
+                            position: absolute
+                            width: 1px
+                            height: 20px
+                            background-color: $icon_bg
+                            right: -20px
+                        &:last-child
+                            &::after
+                                display: none
+                .location
+                    color: $input-black
+                    margin: 20px 0
+                    li
+                        display: flex
+                        align-items: center
+                        gap: 5px
+                        .normal
+                            img
+                                display: block
+                                +transition(0.3s)
+                        .hover-img
+                            img
+                                display: none
+                                +transition(0.3s)
+                .last-list
+                    margin-top: 40px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    position: relative
+                    .star-ul
+                        display: flex
+                        gap: 5px
+                        li
+                            span
+                                img
+                                    +transition(0.3s)
+                    .star-text
+                        font-size: 24px
+                        font-weight: 600
+                        color: $light_blue
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 100%
+                        height: 1px
+                        background-color: $icon_bg
+                        top: -20px
+                &:hover
+                    background-color: $pink-shade
+                    h5
+                        color: $white
+                    .time-date
+                        color: $white
+                        li
+                            .normal
+                                img
+                                    display: none
+                            .hover-img
+                                img
+                                    display: block
+                    .location
+                        color: $white
+                        li
+                            .normal
+                                img
+                                    display: none
+                            .hover-img
+                                img
+                                    display: block
+                    .last-list
+                        .star-ul
+                            li
+                                span
+                                    img
+                                        filter: invert(1) grayscale(1) brightness(11)
+                        .star-text
+                            color: $yellow
+        .slick-next
+            font-size: 0
+            background-color: $icon_bg
+            border-radius: 8px 0px 0px 8px
+            background-image: url(../images/Icon-Back.svg)
+            background-repeat: no-repeat
+            background-position: center
+            padding: 22px 19px
+            position: absolute
+            border: 0
+            width: 13px
+            height: 24px
+            bottom: -50px
+            left: 48%
+            +transform(translateX(-50%))
+            +transition(0.3s)
+            &:hover
+                background-image: url(../images/Icon-Back.svg)
+                background-color: $light_blue
+        .slick-prev
+            font-size: 0
+            background-color: $icon_bg
+            border-radius: 8px 0px 0px 8px
+            background-image: url(../images/Icon-Back.svg)
+            background-repeat: no-repeat
+            background-position: center
+            padding: 22px 19px
+            position: absolute
+            border: -30px
+            width: 13px
+            height: 24px
+            bottom: -50px
+            left: 52%
+            +transform(translateX(-50%) rotate(180deg))
+            +transition(0.3s)
+            z-index: 2
+            &:hover
+                background-image: url(../images/Icon-Back.svg)
+                background-color: $light_blue
+// 
+.event
+    margin: 0 0 90px 0
+    position: relative
+    background-image: url(../images/event-bg.png)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    padding: 50px 0 100px 0
+    .header-text
+        h2
+            color: $white
+            font-size: 34px
+            font-weight: 700
+        a
+            color: $yellow
+            font-weight: 600
+            font-size: 24px
+            +transition(0.3s)
+            &:hover
+                opacity: 80%
+    .products-slick-slider
+        position: relative
+        .element
+            margin-right: 10px
+            position: relative
+            z-index: 1
+            padding: 0 0 30px 0
+            .figut-holder
+                figure
+                    width: 100%
+                    height: 200px
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: cover
+                    border-radius: 8px 8px 0px 0px
+            .product-text
+                border: 1px solid rgba(217, 217, 217, 0.5)
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1)
+                border-radius: 0px 0px 8px 8px
+                padding: 20px
+                margin-top: 10px
+                background-color: $white
+                +transition(0.3s)
+                h5
+                    font-size: 24px
+                    font-weight: 600
+                    color: $black
+                    line-height: 1
+                .time-date
+                    display: flex
+                    align-items: center
+                    gap: 40px
+                    color: $input-black
+                    margin: 20px 0
+                    li
+                        display: flex
+                        align-items: center
+                        gap: 5px
+                        position: relative
+                        .normal
+                            img
+                                display: block
+                                +transition(0.3s)
+                        .hover-img
+                            img
+                                display: none
+                                +transition(0.3s)
+                        &::after
+                            content: ""
+                            position: absolute
+                            width: 1px
+                            height: 20px
+                            background-color: $icon_bg
+                            right: -20px
+                        &:last-child
+                            &::after
+                                display: none
+                .location
+                    color: $input-black
+                    margin: 20px 0
+                    li
+                        display: flex
+                        align-items: center
+                        gap: 5px
+                        .normal
+                            img
+                                display: block
+                                +transition(0.3s)
+                        .hover-img
+                            img
+                                display: none
+                                +transition(0.3s)
+                .last-list
+                    margin-top: 40px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    position: relative
+                    .star-ul
+                        display: flex
+                        gap: 5px
+                        li
+                            span
+                                img
+                                    +transition(0.3s)
+                    .star-text
+                        font-size: 24px
+                        font-weight: 600
+                        color: $light_blue
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 100%
+                        height: 1px
+                        background-color: $icon_bg
+                        top: -20px
+                &:hover
+                    background-color: $pink-shade
+                    h5
+                        color: $white
+                    .time-date
+                        color: $white
+                        li
+                            .normal
+                                img
+                                    display: none
+                            .hover-img
+                                img
+                                    display: block
+                    .location
+                        color: $white
+                        li
+                            .normal
+                                img
+                                    display: none
+                            .hover-img
+                                img
+                                    display: block
+                    .last-list
+                        .star-ul
+                            li
+                                span
+                                    img
+                                        filter: invert(1) grayscale(1) brightness(11)
+                        .star-text
+                            color: $yellow
+        .slick-next
+            font-size: 0
+            background-color: $white
+            border-radius: 8px 0px 0px 8px
+            background-image: url(../images/Icon-Back-ass.svg)
+            background-repeat: no-repeat
+            background-position: center
+            padding: 22px 19px
+            position: absolute
+            border: 0
+            width: 13px
+            height: 24px
+            bottom: -50px
+            left: 48%
+            +transform(translateX(-50%))
+            +transition(0.3s)
+            &:hover
+                background-image: url(../images/Icon-Back.svg)
+                background-color: $pink
+        .slick-prev
+            font-size: 0
+            background-color: $white
+            border-radius: 8px 0px 0px 8px
+            background-image: url(../images/Icon-Back-ass.svg)
+            background-repeat: no-repeat
+            background-position: center
+            padding: 22px 19px
+            position: absolute
+            border: -30px
+            width: 13px
+            height: 24px
+            bottom: -50px
+            left: 52%
+            +transform(translateX(-50%) rotate(180deg))
+            +transition(0.3s)
+            z-index: 2
+            &:hover
+                background-image: url(../images/Icon-Back.svg)
+                background-color: $pink
+// 
+.services
+    margin: 0 0 90px 0
+    position: relative
+    .header-text
+        h2
+            color: $black
+            font-size: 34px
+            font-weight: 700
+        a
+            color: $pink
+            font-weight: 600
+            font-size: 24px
+            +transition(0.3s)
+            &:hover
+                opacity: 80%
+    .products-slick-slider
+        position: relative
+        .element
+            margin-right: 10px
+            position: relative
+            z-index: 1
+            padding: 0 0 30px 0
+            .figut-holder
+                figure
+                    width: 100%
+                    height: 200px
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: cover
+                    border-radius: 8px 8px 0px 0px
+            .product-text
+                border: 1px solid rgba(217, 217, 217, 0.5)
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1)
+                border-radius: 0px 0px 8px 8px
+                padding: 20px
+                margin-top: 10px
+                background-color: $white
+                +transition(0.3s)
+                h5
+                    font-size: 24px
+                    font-weight: 600
+                    color: $black
+                    line-height: 1
+                .time-date
+                    display: flex
+                    align-items: center
+                    gap: 40px
+                    color: $input-black
+                    margin: 20px 0
+                    li
+                        display: flex
+                        align-items: center
+                        gap: 5px
+                        position: relative
+                        .normal
+                            img
+                                display: block
+                                +transition(0.3s)
+                        .hover-img
+                            img
+                                display: none
+                                +transition(0.3s)
+                        &::after
+                            content: ""
+                            position: absolute
+                            width: 1px
+                            height: 20px
+                            background-color: $icon_bg
+                            right: -20px
+                        &:last-child
+                            &::after
+                                display: none
+                .location
+                    color: $input-black
+                    margin: 20px 0
+                    li
+                        display: flex
+                        align-items: center
+                        gap: 5px
+                        .normal
+                            img
+                                display: block
+                                +transition(0.3s)
+                        .hover-img
+                            img
+                                display: none
+                                +transition(0.3s)
+                .last-list
+                    margin-top: 40px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    position: relative
+                    .star-ul
+                        display: flex
+                        gap: 5px
+                        li
+                            span
+                                img
+                                    +transition(0.3s)
+                    .star-text
+                        font-size: 24px
+                        font-weight: 600
+                        color: $light_blue
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 100%
+                        height: 1px
+                        background-color: $icon_bg
+                        top: -20px
+                &:hover
+                    background-color: $pink-shade
+                    h5
+                        color: $white
+                    .time-date
+                        color: $white
+                        li
+                            .normal
+                                img
+                                    display: none
+                            .hover-img
+                                img
+                                    display: block
+                    .location
+                        color: $white
+                        li
+                            .normal
+                                img
+                                    display: none
+                            .hover-img
+                                img
+                                    display: block
+                    .last-list
+                        .star-ul
+                            li
+                                span
+                                    img
+                                        filter: invert(1) grayscale(1) brightness(11)
+                        .star-text
+                            color: $yellow
+        .slick-next
+            font-size: 0
+            background-color: $icon_bg
+            border-radius: 8px 0px 0px 8px
+            background-image: url(../images/Icon-Back.svg)
+            background-repeat: no-repeat
+            background-position: center
+            padding: 22px 19px
+            position: absolute
+            border: 0
+            width: 13px
+            height: 24px
+            bottom: -50px
+            left: 48%
+            +transform(translateX(-50%))
+            +transition(0.3s)
+            &:hover
+                background-image: url(../images/Icon-Back.svg)
+                background-color: $light_blue
+        .slick-prev
+            font-size: 0
+            background-color: $icon_bg
+            border-radius: 8px 0px 0px 8px
+            background-image: url(../images/Icon-Back.svg)
+            background-repeat: no-repeat
+            background-position: center
+            padding: 22px 19px
+            position: absolute
+            border: -30px
+            width: 13px
+            height: 24px
+            bottom: -50px
+            left: 52%
+            +transform(translateX(-50%) rotate(180deg))
+            +transition(0.3s)
+            z-index: 2
+            &:hover
+                background-image: url(../images/Icon-Back.svg)
+                background-color: $light_blue
+// 
+.beaute
+    margin-top: 100px
+    .beauty-holder
+        .fig-holder
+            figure
+                width: 100%
+                height: 634px
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+                border-radius: 0px 8px 8px 0px
+        .beuty-slick-holder
+            width: 81%
+            padding-bottom: 100px
+            .header-text
+                h2
+                    font-size: 34px
+                a
+                    &:hover
+                        opacity: 80%
+            .beute-slick-slider
+                position: relative
+                .element
+                    margin-right: 10px
+                    position: relative
+                    z-index: 1
+                    padding: 0 0 30px 0
+                    .figut-holder
+                        figure
+                            width: 100%
+                            height: 200px
+                            background-position: center
+                            background-repeat: no-repeat
+                            background-size: cover
+                            border-radius: 8px 8px 0px 0px
+                    .product-text
+                        border: 1px solid rgba(217, 217, 217, 0.5)
+                        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1)
+                        border-radius: 0px 0px 8px 8px
+                        padding: 20px
+                        margin-top: 10px
+                        background-color: $white
+                        +transition(0.3s)
+                        h5
+                            font-size: 24px
+                            font-weight: 600
+                            color: $black
+                            line-height: 1
+                        .time-date
+                            display: flex
+                            align-items: center
+                            gap: 40px
+                            color: $input-black
+                            margin: 20px 0
+                            li
+                                display: flex
+                                align-items: center
+                                gap: 5px
+                                position: relative
+                                .normal
+                                    img
+                                        display: block
+                                        +transition(0.3s)
+                                .hover-img
+                                    img
+                                        display: none
+                                        +transition(0.3s)
+                                &::after
+                                    content: ""
+                                    position: absolute
+                                    width: 1px
+                                    height: 20px
+                                    background-color: $icon_bg
+                                    right: -20px
+                                &:last-child
+                                    &::after
+                                        display: none
+                        .location
+                            color: $input-black
+                            margin: 20px 0
+                            li
+                                display: flex
+                                align-items: center
+                                gap: 5px
+                                .normal
+                                    img
+                                        display: block
+                                        +transition(0.3s)
+                                .hover-img
+                                    img
+                                        display: none
+                                        +transition(0.3s)
+                        .last-list
+                            margin-top: 40px
+                            display: flex
+                            justify-content: space-between
+                            align-items: center
+                            position: relative
+                            .star-ul
+                                display: flex
+                                gap: 5px
+                                li
+                                    span
+                                        img
+                                            +transition(0.3s)
+                            .star-text
+                                font-size: 24px
+                                font-weight: 600
+                                color: $light_blue
+                            &::after
+                                content: ""
+                                position: absolute
+                                width: 100%
+                                height: 1px
+                                background-color: $icon_bg
+                                top: -20px
+                        &:hover
+                            background-color: $pink-shade
+                            h5
+                                color: $white
+                            .time-date
+                                color: $white
+                                li
+                                    .normal
+                                        img
+                                            display: none
+                                    .hover-img
+                                        img
+                                            display: block
+                            .location
+                                color: $white
+                                li
+                                    .normal
+                                        img
+                                            display: none
+                                    .hover-img
+                                        img
+                                            display: block
+                            .last-list
+                                .star-ul
+                                    li
+                                        span
+                                            img
+                                                filter: invert(1) grayscale(1) brightness(11)
+                                .star-text
+                                    color: $yellow
+                .slick-next
+                    font-size: 0
+                    background-color: $icon_bg
+                    border-radius: 8px 0px 0px 8px
+                    background-image: url(../images/Icon-Back.svg)
+                    background-repeat: no-repeat
+                    background-position: center
+                    padding: 22px 19px
+                    position: absolute
+                    border: 0
+                    width: 13px
+                    height: 24px
+                    bottom: -50px
+                    left: 46%
+                    +transform(translateX(-50%))
+                    +transition(0.3s)
+                    &:hover
+                        background-image: url(../images/Icon-Back.svg)
+                        background-color: $light_blue
+                .slick-prev
+                    font-size: 0
+                    background-color: $icon_bg
+                    border-radius: 8px 0px 0px 8px
+                    background-image: url(../images/Icon-Back.svg)
+                    background-repeat: no-repeat
+                    background-position: center
+                    padding: 22px 19px
+                    position: absolute
+                    border: -30px
+                    width: 13px
+                    height: 24px
+                    bottom: -50px
+                    left: 52%
+                    +transform(translateX(-50%) rotate(180deg))
+                    +transition(0.3s)
+                    z-index: 2
+                    &:hover
+                        background-image: url(../images/Icon-Back.svg)
+                        background-color: $light_blue
+// 
+.Famille
+    margin-top: 100px
+    .beauty-holder
+        .fig-holder
+            figure
+                width: 100%
+                height: 634px
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+                border-radius: 8px 0px 0px 8px
+        .beuty-slick-holder
+            width: 81%
+            padding-bottom: 100px
+            .header-text
+                h2
+                    font-size: 34px
+                a
+                    &:hover
+                        opacity: 80%
+            .beute-slick-slider
+                position: relative
+                .element
+                    margin-right: 10px
+                    position: relative
+                    z-index: 1
+                    padding: 0 0 30px 0
+                    .figut-holder
+                        figure
+                            width: 100%
+                            height: 200px
+                            background-position: center
+                            background-repeat: no-repeat
+                            background-size: cover
+                            border-radius: 8px 8px 0px 0px
+                    .product-text
+                        border: 1px solid rgba(217, 217, 217, 0.5)
+                        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1)
+                        border-radius: 0px 0px 8px 8px
+                        padding: 20px
+                        margin-top: 10px
+                        background-color: $white
+                        +transition(0.3s)
+                        h5
+                            font-size: 24px
+                            font-weight: 600
+                            color: $black
+                            line-height: 1
+                        .time-date
+                            display: flex
+                            align-items: center
+                            gap: 40px
+                            color: $input-black
+                            margin: 20px 0
+                            li
+                                display: flex
+                                align-items: center
+                                gap: 5px
+                                position: relative
+                                .normal
+                                    img
+                                        display: block
+                                        +transition(0.3s)
+                                .hover-img
+                                    img
+                                        display: none
+                                        +transition(0.3s)
+                                &::after
+                                    content: ""
+                                    position: absolute
+                                    width: 1px
+                                    height: 20px
+                                    background-color: $icon_bg
+                                    right: -20px
+                                &:last-child
+                                    &::after
+                                        display: none
+                        .location
+                            color: $input-black
+                            margin: 20px 0
+                            li
+                                display: flex
+                                align-items: center
+                                gap: 5px
+                                .normal
+                                    img
+                                        display: block
+                                        +transition(0.3s)
+                                .hover-img
+                                    img
+                                        display: none
+                                        +transition(0.3s)
+                        .last-list
+                            margin-top: 40px
+                            display: flex
+                            justify-content: space-between
+                            align-items: center
+                            position: relative
+                            .star-ul
+                                display: flex
+                                gap: 5px
+                                li
+                                    span
+                                        img
+                                            +transition(0.3s)
+                            .star-text
+                                font-size: 24px
+                                font-weight: 600
+                                color: $light_blue
+                            &::after
+                                content: ""
+                                position: absolute
+                                width: 100%
+                                height: 1px
+                                background-color: $icon_bg
+                                top: -20px
+                        &:hover
+                            background-color: $pink-shade
+                            h5
+                                color: $white
+                            .time-date
+                                color: $white
+                                li
+                                    .normal
+                                        img
+                                            display: none
+                                    .hover-img
+                                        img
+                                            display: block
+                            .location
+                                color: $white
+                                li
+                                    .normal
+                                        img
+                                            display: none
+                                    .hover-img
+                                        img
+                                            display: block
+                            .last-list
+                                .star-ul
+                                    li
+                                        span
+                                            img
+                                                filter: invert(1) grayscale(1) brightness(11)
+                                .star-text
+                                    color: $yellow
+                .slick-next
+                    font-size: 0
+                    background-color: $icon_bg
+                    border-radius: 8px 0px 0px 8px
+                    background-image: url(../images/Icon-Back.svg)
+                    background-repeat: no-repeat
+                    background-position: center
+                    padding: 22px 19px
+                    position: absolute
+                    border: 0
+                    width: 13px
+                    height: 24px
+                    bottom: -50px
+                    left: 46%
+                    +transform(translateX(-50%))
+                    +transition(0.3s)
+                    &:hover
+                        background-image: url(../images/Icon-Back.svg)
+                        background-color: $light_blue
+                .slick-prev
+                    font-size: 0
+                    background-color: $icon_bg
+                    border-radius: 8px 0px 0px 8px
+                    background-image: url(../images/Icon-Back.svg)
+                    background-repeat: no-repeat
+                    background-position: center
+                    padding: 22px 19px
+                    position: absolute
+                    border: -30px
+                    width: 13px
+                    height: 24px
+                    bottom: -50px
+                    left: 52%
+                    +transform(translateX(-50%) rotate(180deg))
+                    +transition(0.3s)
+                    z-index: 2
+                    &:hover
+                        background-image: url(../images/Icon-Back.svg)
+                        background-color: $light_blue    
+        //    
+//
+.page-loda
+    text-align: center
+    margin: 50px 0
+    padding: 50px 0 0 0
+    border-top: 1px solid $icon_bg
+    .wapper
+        background-color: $icon_bg
+        display: inline-block
+        text-align: center
+        margin: 0 auto
+        border-radius: 8px
+        .page-load-holder
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 10px
+            gap: 20px
+            .prv
+                a
+                    img
+                        background-color: $white
+                        padding: 8px 10px
+                        border-radius: 6px
+                        font-size: 15px
+                        font-weight: 600
+                        +transition(0.3s)
+                        &:hover
+                            background-color: $light_blue
+            .next
+                a
+                    img
+                        background-color: $white
+                        padding: 8px 10px
+                        border-radius: 6px
+                        +transform(rotate(180deg))
+                        +transition(0.3s)
+                        &:hover
+                            background-color: $light_blue
+            ul
+                display: flex
+                align-items: center
+                gap: 20px
+                li
+                    a
+                        background-color: $icon_bg
+                        padding: 6px 12px
+                        border-radius: 6px
+                        color: $white
+                        +transition(0.3s)
+                        &:hover
+                            background-color: $light_blue
+                            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.06)
+                    &.active
+                        a
+                            background-color: $light_blue
+                            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.06)
+//
+.last-footer-option
+    background: linear-gradient(131.57deg, #DA2D77 -17.61%, #017DA9 59.43%, #E7B306 106.68%)
+    padding: 50px 0
+    .holder
+        h5
+            font-size: 24px
+            font-weight: 600
+            color: $white
+            margin-bottom: 20px
+            line-height: 1
+        p
+            color: $white
+            font-size: 15px
+            font-weight: 500
+            a
+                color: $yellow
+// Footer
+.footer-main
+    background-color: $light_blue
+    padding: 60px 0 0 0 
+    .news-bg
+        background-color: $black
+        padding: 20px
+        border-radius: 8px
+        h2
+            color: $white
+        p
+            color: $white
+            font-weight: 400
+        .news-bg-form
+            input
+                display: block
+                width: 100%
+                padding: 10px
+                border-radius: 8px
+                margin: 20px 0
+                border: 0
+                outline: 0
+                font-size: 14px
+                &::placeholder
+                    font-size: 14px
+                    font-weight: 400
+                    color: $input-black
+            button
+                width: 100%
+                padding: 10px
+                border-radius: 8px
+                color: $black
+                font-size: 16px
+                border: 1px solid $white
+                +transition(0.3s)
+                &:hover
+                    background-color: transparent
+                    color: $white
+    .text
+        p
+            color: $white
+            font-weight: 700
+            font-size: 18px
+            margin-bottom: 20px
+            span
+                color: $yellow
+    .footer-down-ul
+        border-bottom: 1px solid $white
+        ul
+            display: flex
+            gap: 20px
+            margin: 30px 0 
+            text-align: center
+            flex-wrap: wrap
+            li
+                a
+                    color: $white
+                    font-size: 18px
+                    font-weight: 700
+                    +transition(0.3s)
+                    &:hover
+                        color: $yellow
+                    
+    .copyright
+        margin: 30px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        ul
+            display: flex
+            gap: 10px
+        p
+            color: $white
+            font-size: 16px
+            font-weight: 400
+// 
+
+
+
+.login-screen
+    .login-main-wapper
+        background-color: $white
+        padding: 50px 0
+        text-align: center
+        position: relative
+        .login-id
+            a
+                display: flex
+                align-items: center
+                justify-content: center
+                display: block
+                position: relative
+                background-color: $white
+                border: 1px solid $icon_bg
+                padding: 14px 20px
+                border-radius: 8px
+                margin-bottom: 20px
+                &:hover
+                    color: $pink
+                span
+                    img
+                        position: absolute
+                        top: 18px
+        .or-wapper
+            position: relative
+            width: 100%
+            .or
+                background-color: $white
+                display: inline-block
+                z-index: 2
+                position: relative
+                padding: 10px
+                font-size: 12px
+                font-weight: 500
+                text-transform: uppercase
+                color: $black
+            &::after
+                content: ""
+                background-color: $icon_bg
+                position: absolute
+                width: 100%
+                height: 1px
+                left: 0
+                top: 50%
+                z-index: 1
+        .login-register
+            margin-top: 20px
+            #login-form
+                #email-lable
+                    width: 100%
+                    position: relative
+                    border: 1px solid $icon_bg
+                    padding: 14px 20px
+                    border-radius: 8px
+                    margin-bottom: 20px
+                    #email
+                        display: block
+                        width: 100%
+                        outline: 0
+                        font-size: 15px
+                        color: $black
+                        &:placeholder
+                            font-size: 15px
+                            color: $icon_bg
+                    &::after
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Mail-bl.svg)
+                        width: 18px
+                        height: 13.49px
+                        background-repeat: no-repeat
+                        right: 20px
+                        top: 23px
+                #password-lable
+                    width: 100%
+                    position: relative
+                    border: 1px solid $icon_bg
+                    padding: 14px 20px
+                    border-radius: 8px
+                    #password
+                        display: block
+                        width: 100%
+                        outline: 0
+                        font-size: 15px
+                        color: $black
+                        &:placeholder
+                            font-size: 15px
+                            color: $icon_bg
+                    .hide
+                        position: absolute
+                        right: 20px
+                        top: 23px
+                        background-image: url(../images/Icon-Hide.svg)
+                        width: 18px
+                        height: 14.25px
+                        &.active
+                            display: none
+                            background-image: url(../images/Icon-show-eye.svg)
+                .remember-div
+                    margin-top: 10px
+                    ul
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        font-size: 15px
+                        color: $input-black
+                        li
+                            #Remember
+                                border: 1px solid $icon_bg
+                .submit-btn
+                    button
+                        width: 100%
+                        display: block
+                        padding: 15px
+                        font-size: 16px
+                        font-weight: 400
+                        background-color: $input-black
+                        color: $white
+                        border-radius: 8px
+                        margin-top: 40px
+                        +transition(0.3s)
+                        &:hover
+                            background-color: $pink
+        .last-text
+            margin-top: 40px
+            p
+                font-size: 15px
+                color: $input-black
+                font-weight: 500
+                a
+                    color: $pink
+                    +transition(0.3s)
+                    &:hover
+                        color: $input-black
+.login-screen.fancybox__content
+    padding: 0 36px
+    border-radius: 12px 
+// 
+.register-and-profile
+    .register-wapper-profie
+        background-color: $white
+        .tab-sec
+            text-align: center
+            ul
+                display: flex
+                width: 100%
+                align-items: center
+                justify-content: space-between
+                li
+                    background-color: $white
+                    padding: 20px
+                    color: $black
+                    width: 100%
+                    +transition(0.3s)
+                    &.active
+                        background-color: $yellow-shade
+                        color: $white
+                    &:hover
+                        background-color: $yellow-shade
+                        color: $white
+
+        .img-holder-text
+            position: relative
+            figure
+                width: 415px
+                height: 1310px
+                background-position: center
+                background-repeat: no-repeat
+                background-size: cover
+                position: relative
+                &::after
+                    content: ""
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    top: 0
+                    background-color: rgba(30, 35, 38, 0.3)
+            .text
+                position: absolute
+                top: 50%
+                left: 48%
+                width: 90%
+                +transform(translate(-50% , -50%))
+                text-align: center
+                padding: 0 20px
+                .wapper
+                    border-bottom: 1px solid $white
+                    padding-bottom: 30px
+                    margin-top: 30px
+                    h2
+                        font-size: 34px
+                        color: $white
+                    h5
+                        font-size: 24px
+                        color: $white
+                    p
+                        font-size: 15px
+                        font-weight: 600
+                        color: $white
+                    ul
+                        font-size: 15px
+                        font-weight: 600
+                        color: $white
+                        margin-top: 10px
+                        li
+                            margin-bottom: 20px
+                    &:last-child
+                        border-bottom: 0
+                .extra-wapper
+                    margin-top: 30px
+                    h5
+                        font-size: 24px
+                        color: $white
+        #register-form-fency
+            .form-wapper
+                margin-top: 50px
+                border-bottom: 1px solid $icon_bg
+                padding-bottom: 10px
+                .login-id
+                    text-align: center
+                    padding: 0 50px
+                    a
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        display: block
+                        position: relative
+                        background-color: $white
+                        border: 1px solid $icon_bg
+                        padding: 14px 20px
+                        border-radius: 8px
+                        margin-bottom: 20px
+                        outline: 0
+                        &:hover
+                            color: $pink
+                        span
+                            img
+                                position: absolute
+                                top: 18px
+            .gender
+                padding: 30px 0
+                border-bottom: 1px solid $icon_bg
+                ul
+                    display: flex
+                    align-items: center
+                    gap: 50px
+                    font-size: 15px
+                    font-weight: 600
+                    color: $input-black
+                    justify-content: center
+                    li
+                        display: flex
+                        align-items: center
+                        gap: 10px
+                        span
+                            input
+                                outline: 0
+            .form-holder-dtl
+                padding: 0 50px
+                margin-top: 30px
+                #email-lable
+                    width: 100%
+                    position: relative
+                    border: 1px solid $icon_bg
+                    padding: 14px 20px
+                    border-radius: 8px
+                    margin-bottom: 20px
+                    #email
+                        display: block
+                        width: 100%
+                        outline: 0
+                        font-size: 15px
+                        color: $black
+                        &:placeholder
+                            font-size: 15px
+                            color: $icon_bg
+                    &::after
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Mail-bl.svg)
+                        width: 18px
+                        height: 13.49px
+                        background-repeat: no-repeat
+                        right: 20px
+                        top: 23px
+                #Address-lable
+                    width: 100%
+                    position: relative
+                    border: 1px solid $icon_bg
+                    padding: 14px 20px
+                    border-radius: 8px
+                    margin-bottom: 20px
+                    #address
+                        display: block
+                        width: 100%
+                        outline: 0
+                        font-size: 15px
+                        color: $black
+                        &:placeholder
+                            font-size: 15px
+                            color: $icon_bg
+                    &::after
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Address.svg)
+                        width: 18px
+                        height: 18px
+                        background-repeat: no-repeat
+                        right: 20px
+                        top: 23px
+                .main-phone-div
+                    margin-bottom: 20px
+                    #phone-lable
+                        width: 100%
+                        position: relative
+                        border: 1px solid $icon_bg
+                        padding: 14px 20px
+                        border-radius: 8px
+                        .level-group
+                            display: flex
+                            gap: 20px
+                            align-items: center
+                            .form-select
+                                border: 0
+                                border-right: 1px solid $icon_bg
+                                border-radius: 0
+                                width: 14%
+                                padding: 0 2.25rem 0 .75rem
+                                outline: 0
+                                background-image: url(../images/Icon-Dropdown-fancy.svg)
+                                background-repeat: no-repeat
+                                color: $input-black
+                            #number
+                                display: block
+                                width: 100%
+                                outline: 0
+                                font-size: 15px
+                                color: $black
+                                &:placeholder
+                                    font-size: 15px
+                                    color: $icon_bg
+                            &::after
+                                content: ""
+                                position: absolute
+                                background-image: url(../images/Icon-Phone.svg)
+                                width: 18px
+                                height: 18px
+                                background-repeat: no-repeat
+                                right: 20px
+                                top: 20px
+                    .choose
+                        font-size: 15px
+                        font-weight: 600
+                        color: $input-black
+                        margin-top: 10px
+                        display: inline-block
+                .pass-div
+                    .pass-div-holder
+                        margin-bottom: 20px
+                        #password-lable
+                            width: 100%
+                            position: relative
+                            border: 1px solid $icon_bg
+                            padding: 14px 20px
+                            border-radius: 8px
+                            #password
+                                display: block
+                                width: 100%
+                                outline: 0
+                                font-size: 15px
+                                color: $black
+                                &:placeholder
+                                    font-size: 15px
+                                    color: $icon_bg
+                            .hide
+                                position: absolute
+                                right: 20px
+                                top: 23px
+                                background-image: url(../images/Icon-Hide.svg)
+                                width: 18px
+                                height: 14.25px
+                                &.active
+                                    display: none
+                                    background-image: url(../images/Icon-show-eye.svg)
+                        &:nth-child(3)
+                            margin-bottom: 0
+                    .code
+                        display: inline-block
+                        margin-top: 10px
+                        color: $input-black
+                        font-size: 15px
+                        font-weight: 500
+        #register-second
+            width: 100%
+            padding: 15px 0
+            margin-top: 40px
+            background-color: $input-black
+            color: $white
+            font-size: 16px
+            font-weight: 400
+            border-radius: 8px
+            +transition(0.3s)
+            &:hover
+                background-color: $pink
+        .accout-text
+            ul
+                text-align: center
+                margin-top: 30px
+                font-size: 15px
+                font-weight: 500
+                color: $input-black
+                li
+                    &:nth-child(1)
+                        margin-bottom: 30px
+                    &:nth-child(2)
+                        margin-bottom: 20px
+                    &:nth-child(3)
+                        margin-bottom: 10px
+                    &:nth-child(4)
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        gap: 10px
+                    a
+                        color: $pink
+                        font-size: 15px
+                        font-weight: 500
+                        +transition(0.3s)
+                        &:hover
+                            opacity: 70%
+                    #uncheck
+                        outline: 0
+                        width: 20px
+                        height: 20px
+
+
+                     
+                        
+
+
+                                
+
+
+
+.register-and-profile.fancybox__content
+    width: 82%
+    background-color: transparent
+
+                            
+
+
+
+
+// inner page - start
+.inner-banner-idea
+    background-image: url(../images/inner-banner-idea.png)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    .banner-text
+        padding: 100px 0
+        text-align: center
+        h2
+            font-size: 60px
+            font-weight: 700
+            color: $white
+
+.wall-of-idea
+    margin: 50px 0
+    .content
+        h2
+            margin-bottom: 20px
+        p
+            font-size: 18px
+            font-weight: 600
+            color: $black
+            span
+                display: block
+                margin-bottom: 20px
+    .input-flid-upper
+        margin-top: 30px
+        display: flex
+        align-items: center
+        gap: 10px
+        #upper-inner-fst-from
+            display: flex
+            align-items: center
+            border: 1px solid $input-black
+            padding: 18px 20px
+            border-radius: 8px
+            width: 100%
+            #upper-input
+                position: relative
+                #name
+                    width: 220px
+                    display: inline-block
+                    outline: 0
+                    border: 0
+                    color: $input-black
+                    font-size: 15px
+                    &::placeholder
+                        font-size: 15px
+                        font-weight: 600
+                        color: $input-black
+                &::after
+                    content: ""
+                    position: absolute
+                    width: 1px
+                    height: 65px
+                    right: 10px
+                    top: -19px
+                    background-color: $input-black
+            .form-select
+                width: 100%
+                border: 0
+                outline: 0
+                box-shadow: none
+                color: $input-black
+                padding: 0 2.25rem 0 .75rem
+                font-size: 15px
+                font-weight: 600
+                option
+                    width: 100%
+                    border-radius: 6px
+                    padding: 5px
+        .submit-upper
+            button
+                background-color: $pink
+                padding: 15px 25px
+                color: $white
+                font-size: 16px
+                font-weight: 400
+                border-radius: 8px
+                border: 1px solid $pink
+                +transition(0.3s)
+                &:hover
+                    background-color: transparent
+                    color: $pink
+    .icon-section
+        display: flex
+        justify-content: end
+        img
+            position: absolute
+            width: 31.97px
+            height: 32px
+
+.img-figure
+    margin-top: 20px
+    margin-bottom: 50px
+    .main-wapper
+        margin-top: 20px
+        +transition(0.3s)
+        .figure-holder
+            figure
+                width: 100%
+                height: 300px
+                background-position: center
+                background-size: cover
+                background-repeat: no-repeat
+                border-radius: 8px 8px 0px 0px
+        .figure-text-wapper
+            margin-top: 10px
+            background-color: $white
+            padding: 20px
+            border: 1px solid rgba(217, 217, 217, 0.5)
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1)
+            border-radius: 0px 0px 8px 8px
+            +transition(0.3s)
+            .figure-text
+                border-bottom: 1px solid $icon_bg
+                padding-bottom: 20px
+                +transition(0.3s)
+                h3
+                    font-size: 24px
+                    color: $black
+                    margin: 10px 0
+                    line-height: 1
+                span
+                    font-size: 15px
+                    color: $input-black
+                p
+                    font-size: 15px
+                    font-weight: 500
+                    a
+                        color: $light_blue
+            .event-submit
+                margin-top: 20px
+                +transition(0.3s)
+                p
+                    font-size: 15px
+                    font-weight: 500
+                    color: $black
+                    line-height: 18px
+                a
+                    background-color: $pink
+                    width: 100%
+                    display: block
+                    padding: 15px
+                    font-size: 16px
+                    font-weight: 400
+                    text-align: center
+                    color: $white
+                    margin-top: 30px
+                    border-radius: 8px
+                    border: 1px solid $pink
+                    +transition(0.3s)
+                    &:hover
+                        background-color: transparent
+                        color: $pink
+        &:hover
+            .figure-text-wapper
+                background-color: $pink
+                .figure-text
+                    h3
+                        color: $white
+                    span
+                        color: $white
+                    p
+                        color: $white
+                        a
+                            color: $yellow
+                .event-submit
+                    p
+                        color: $white
+                    a
+                        background-color: $white
+                        color: $pink
+
+// idees
+.idees
+    background-image: url(../images/Add-bg.png)
+    background-size: cover
+    background-repeat: no-repeat
+    padding: 10px
+    margin: 50px 0
+    .border-extra
+        border: 1px solid $white
+        border-radius: 8px
+        .text
+            padding: 100px 0
+            position: relative
+            a
+                img
+                    position: absolute
+                    right: 187px
+                    top: 50%
+                    +transform(translateY(-50%))
+
+
+// page-load-inner
+
+.page-load-inner
+    text-align: center
+    margin: 50px 0
+    .wapper
+        background-color: $icon_bg
+        display: inline-block
+        text-align: center
+        margin: 0 auto
+        border-radius: 8px
+        .page-load-holder
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 10px
+            gap: 20px
+            .prv
+                a
+                    img
+                        background-color: $white
+                        padding: 8px 10px
+                        border-radius: 6px
+                        font-size: 15px
+                        font-weight: 600
+                        +transition(0.3s)
+                        &:hover
+                            background-color: $light_blue
+            .next
+                a
+                    img
+                        background-color: $white
+                        padding: 8px 10px
+                        border-radius: 6px
+                        +transform(rotate(180deg))
+                        +transition(0.3s)
+                        &:hover
+                            background-color: $light_blue
+            ul
+                display: flex
+                align-items: center
+                gap: 20px
+                li
+                    a
+                        background-color: $icon_bg
+                        padding: 6px 12px
+                        border-radius: 6px
+                        color: $white
+                        +transition(0.3s)
+                        &:hover
+                            background-color: $light_blue
+                            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.06)
+                    &.active
+                        a
+                            background-color: $light_blue
+                            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.06)
+
+
+// inner-banner-premium
+.inner-banner-premium
+    background-image: url(../images/premium-bg.png)
+    height: 60vh
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+.premium-text
+    .text-wapper
+        margin: 50px 0 30px 0
+        h2
+            margin-bottom: 10px
+        p
+            font-size: 24px
+            font-weight: 600
+            color: $black
+    .img-wapper
+        text-align: center
+        margin-bottom: 30px
+        .content-wapper
+            background-color: $new-bg
+            padding: 30px
+            border-radius: 8px
+            margin-bottom: 20px
+            min-height: 362px
+            .icon-box
+                width: 98px
+                height: 100px
+                position: relative
+                width: 100%
+                img
+                    position: absolute
+                    left: 50%
+                    +transform(translateX(-50%))
+            h3
+                font-size: 24px
+                font-weight: 600
+                color: $black
+                margin-top: 20px
+            p
+                font-size: 15px
+                font-weight: 500
+                color: $black
+                margin-top: 20px
+
+// faq-main
+.faq-main
+    margin: 50px 0
+    .text
+        margin-bottom: 30px
+        h2
+            margin-bottom: 20px
+            line-height: 1
+            color: $black
+        p
+            font-size: 24px
+            color: $black
+            font-weight: 600  
+    .faq-wapper
+        .accordion
+            .accordion-item
+                border-radius: 8px
+                border-color: $input-black
+                margin-bottom: 10px
+                .accordion-titel
+                    border-radius: 8px
+                    padding: 20px
+                    background-color: $white
+                    h3
+                        font-size: 15px
+                        color: $input-black
+                        +transition(0.3s)
+                        position: relative
+                        +transition(0.3s)
+                        &::after
+                            content: ""
+                            position: absolute
+                            background-image: url(../images/Icon-Dropdown-faq.svg)
+                            width: 13px
+                            height: 12px
+                            background-repeat: no-repeat
+                            right: 0px
+                            top: 50%
+                            +transform(translateX(-50%))
+                            +transition(0.4s)
+                .accordion-contant
+                    background-color: $new-bg
+                    border: 1px solid #9A9A9A
+                    border-radius: 0px 
+                    padding: 20px
+                    display: none
+                    h5
+                        color: $black
+                        font-size: 15px
+                        font-weight: 600
+                    p
+                        font-size: 15px
+                        color: $black
+                        font-weight: 500
+                        margin: 20px 0
+                        strong
+                            display: block
+                            font-weight: 700
+                &.active
+                    .accordion-contant
+                        background-color: $new-bg
+                        border-radius: 0 0 8px 8px
+                        border: 0
+                        display: block
+                    .accordion-titel
+                        background-color: $new-bg
+                        border-radius: 8px 8px 0 0
+                        h3
+                            color: $black
+                            &::after
+                                +transform(rotate(180deg)(translateX(50%)))
+                                top: 50%
+
+// influencers-main
+.influencers-main
+    margin: 50px 0 70px 0
+    .main-wapper-fst
+        margin-bottom: 70px
+        .figure-holder
+            figure
+                width: 100%
+                height: 570px
+                background-position: center
+                background-size: cover
+                background-repeat: no-repeat
+                border-radius: 0 8px 8px 0
+        .content-wapper
+            padding-left: 5px
+            .wapper-img
+                display: flex
+                align-items: center
+                gap: 20px
+                flex-wrap: wrap
+                .img-main
+                    margin-top: 30px
+                    .img-holder
+                        padding: 30px
+                        border: 1px solid rgba(217, 217, 217, 0.5)
+                        border-radius: 8px 8px 0px 0px
+                        background-color: $white
+                        position: relative 
+                        width: 305px
+                        height: 137px
+                        img
+                            position: absolute
+                            left: 50%
+                            top: 50%
+                            +transform(translate(-50% , -50%))
+                    .text
+                        margin-top: 10px
+                        a
+                            font-size: 24px
+                            color: $white
+                            background-color: $light_blue
+                            display: inline-block
+                            padding: 30px 63px
+                            border-radius: 0px 0px 8px 8px
+                            border: 1px solid $light_blue
+                            +transition(0.3s)
+                            &:hover
+                                background-color: transparent
+                                color: $light_blue
+            .text
+                margin-top: 30px
+                h3
+                    font-size: 24px 
+                    color: $black
+                    font-weight: 600
+                    margin-bottom: 20px
+                ul
+                    color: $input-black
+                    font-size: 18px
+                    font-weight: 600
+                    li
+                        position: relative
+                        padding-left: 30px
+                        margin-bottom: 20px
+                        span
+                            color: $light_blue
+                        &::after
+                            content: ""
+                            position: absolute
+                            background-image: url(../images/Bullet.svg)
+                            width: 18px
+                            height: 13px
+                            background-repeat: no-repeat
+                            left: 0  
+                            top: 8px  
+            .register
+                display: flex
+                justify-content: end
+                align-items: center
+                position: absolute
+                right: 319px
+                gap: 10px
+                a
+                    background-color: $pink
+                    padding: 15px 16px
+                    color: $white
+                    font-weight: 400
+                    font-size: 16px
+                    border-radius: 8px
+                    display: inline-block
+                    border: 1px solid $pink
+                    +transition(0.3s)
+                    &:hover
+                        background-color: transparent
+                        color: $pink
+                p
+                    font-size: 15px
+                    font-weight: 600
+                    color: $input-black 
+    .main-wapper-sec
+        .figure-holder
+            figure
+                width: 100%
+                height: 900px
+                background-position: center
+                background-size: cover
+                background-repeat: no-repeat
+                border-radius: 8px 0 0 8px
+        .content-wapper
+            padding-right: 5px
+            max-width: 960px
+            width: 100%
+            .wapper-text
+                border-bottom: 1px solid $icon_bg
+                h2
+                    margin-bottom: 30px
+                h5
+                    font-size: 24px
+                    color: $black
+                    font-weight: 600
+                p
+                    font-size: 18px
+                    font-weight: 600
+                    color: $input-black
+                .get
+                    margin: 50px 0
+                    display: flex
+                    justify-content: end
+                    a
+                        background-color: $pink
+                        color: $white
+                        font-size: 16px
+                        font-weight: 400
+                        display: inline-block
+                        padding: 15px 20px
+                        border-radius: 8px 
+                        border: 1px solid $pink
+                        +transition(0.3s)
+                        &:hover
+                            background-color: transparent
+                            color: $pink
+            .text
+                margin-top: 30px
+                h3
+                    font-size: 24px
+                    font-weight: 600
+                    color: $black
+                    margin-bottom: 20px
+                ul
+                    color: $input-black
+                    font-size: 18px
+                    font-weight: 600
+                    li
+                        margin-bottom: 20px
+                        .number
+                            margin-right: 10px
+                            background-color: $light_blue
+                            padding: 9px 10px
+                            border-radius: 100%
+                            color: $white
+                            font-size: 18px
+                            font-weight: 600
+                .extra-wapper
+                    padding: 20px 0 20px 65px
+                    background-color: $new-bg
+                    border-radius: 8px
+                    margin-top: 10px
+                    margin-bottom: 20px
+                    h3
+                        font-size: 24px
+                        font-weight: 600
+                        color: $black
+                        margin-bottom: 20px
+                        position: relative
+                        &::after
+                            content: ""
+                            position: absolute
+                            width: 40px
+                            height: 40px
+                            background-image: url(../images/Logo-SB.png)
+                            left: -45px
+                            top: -4px
+                    ul
+                        color: $input-black
+                        font-size: 18px
+                        font-weight: 600
+                    li
+                        position: relative
+                        padding-left: 30px
+                        margin-bottom: 20px
+                        span
+                            color: $light_blue
+                        &::after
+                            content: ""
+                            position: absolute
+                            background-image: url(../images/Bullet.svg)
+                            width: 18px
+                            height: 13px
+                            background-repeat: no-repeat
+                            left: 0  
+                            top: 8px  
+            .register
+                display: flex
+                justify-content: end
+                margin-top: 50px
+                align-items: center
+                gap: 10px
+                a
+                    background-color: $pink
+                    display: inline-block
+                    padding: 15px
+                    border: 1px solid $pink  
+                    color: $white
+                    font-size: 16px
+                    font-weight: 400
+                    border-radius: 8px 
+                    +transition(0.3s)
+                    &:hover
+                        background-color: transparent
+                        color: $pink
+                p
+                        font-size: 15px
+                        color: $input-black
+                        font-weight: 600   
+
+//gift-card
+.gift-card
+    margin: 50px 0
+    h2
+        font-size: 34px
+        color: $black
+        margin-bottom: 10px
+        font-weight: 700
+    p
+        font-size: 24px
+        color: $black
+        font-weight: 600
+    .main-wapper
+        margin-top: 30px
+        .img-flex-box
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 120px
+            .img-holder
+                width: 420px
+                overflow: hidden
+                position: relative
+                figure
+                    width: 100%
+                    height: 280px
+                    background-size: cover
+                    background-repeat: no-repeat
+                    +transition(0.3s)
+                .price-box
+                    position: absolute
+                    top: 60px
+                    left: 60px
+                    h3
+                        font-size: 24px
+                        font-weight: 600
+                        color: $black
+                    span
+                        font-size: 40px
+                        font-weight: 600
+                        color: $black
+                .buy
+                    position: absolute
+                    bottom: 40px
+                    right: 40px
+                    a
+                        display: inline-block
+                        background-color: $pink
+                        color: $white
+                        font-size: 16px
+                        font-weight: 400
+                        padding: 15px 45px
+                        border-radius: 8px
+                        border: 1px solid $pink
+                        +transition(0.3s)
+                        &:hover
+                            background-color: transparent
+                            color: $pink
+                &:hover
+                    figure
+                        +transform(scale(1.3))
+        .img-holder-big
+            width: 540px
+            position: relative
+            left: 0
+            right: 0
+            margin: 0 auto
+            margin-top: 50px
+            margin-bottom: 50px
+            overflow: hidden
+            +transition(0.3s)
+            figure
+                width: 100%
+                height: 380px
+                background-size: cover
+                background-repeat: no-repeat
+                +transition(0.3s)
+            .price-box
+                position: absolute
+                top: 60px
+                left: 60px
+                h3
+                    font-size: 24px
+                    font-weight: 600
+                    color: $black
+                span
+                    font-size: 40px
+                    font-weight: 600
+                    color: $black
+            .buy
+                position: absolute
+                bottom: 50px
+                right: 50px
+                a
+                    display: inline-block
+                    background-color: $pink
+                    color: $white
+                    font-size: 16px
+                    font-weight: 400
+                    padding: 15px 45px
+                    border-radius: 8px
+                    border: 1px solid $pink
+                    +transition(0.3s)
+                    &:hover
+                        background-color: transparent
+                        color: $pink
+            &:hover
+                figure
+                    +transform(scale(1.3))
+        .input-section
+            background-color: $new-bg
+            padding: 30px
+            border-radius: 8px
+            margin: 50px 0
+            h3
+                font-size: 24px
+                font-weight: 600
+                color: $black
+                margin-bottom: 20px
+            #choose-amount
+                display: flex
+                align-items: center
+                gap: 10px
+                flex-wrap: wrap
+                .form-group
+                    border: 1px solid $icon_bg
+                    padding: 15px 20px
+                    width: 415px
+                    font-size: 15px
+                    font-weight: 600
+                    color: $input-black
+                    border-radius: 8px
+                    position: relative
+                    display: flex
+                    label
+                        position: relative
+                        padding-left: 20px
+                        #ammount
+                            outline: 0
+                            border: 0
+                            margin-left: 20px
+                            position: relative
+                            font-size: 15px
+                            color: $black
+                            background-color: transparent
+                            &::placeholder
+                                font-size: 15px
+                                font-weight: 600
+                                color: $input-black
+                        &::after
+                            content: ""
+                            position: absolute
+                            background-color: $icon_bg
+                            width: 1px
+                            height: 60px
+                            left: 20px
+                            top: -16px
+                button#buy
+                    background-color: $pink
+                    color: $white
+                    padding: 14px 35px
+                    font-size: 16px
+                    font-weight: 400
+                    border-radius: 8px
+                    border: 1px solid $pink
+                    +transition(0.3s)
+                    &:hover
+                        background-color: transparent
+                        color: $pink
+
+// How it Works
+.inner-banner-works
+    background-image: url(../images/how-it-works.png)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    .banner-text
+        padding: 70px 0
+        text-align: center
+        h2
+            font-size: 60px
+            font-weight: 700
+            color: $white
+            margin-bottom: 10px
+        p
+            color: $white
+            font-size: 24px
+            font-weight: 600
+.works-main
+    margin: 50px 0
+    h2
+        font-size: 34px
+        font-weight: 600
+        color: $black
+        margin-bottom: 30px
+    .main-wapper
+        .img-main
+            .figure-holder
+                position: relative
+                figure
+                    width: 100%
+                    height: 564px
+                    background-position: center
+                    background-size: cover
+                    background-repeat: no-repeat
+                    position: relative
+                    border-radius: 8px
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 100%
+                        height: 100%
+                        top: 0
+                        background: rgba(30, 35, 38, 0.6)
+                        border-radius: 8px
+                .text-div
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    +transform(translate(-50% , -50%))
+                    text-align: center
+                    width: 68%
+                    a
+                        font-size: 24px
+                        display: inline-block
+                        color: $white
+                        margin-bottom: 30px
+                        font-weight: 600
+                    p
+                        color: $white
+                        font-size: 24px
+                        font-weight: 600
+        .begin
+            text-align: center
+            a
+                background-color: $pink
+                border: 1px solid $pink
+                +transition(0.3s)
+                color: $white
+                padding: 15px 35px
+                font-size: 16px
+                font-weight: 400
+                display: inline-block
+                border-radius: 8px
+                margin-top: 40px
+                &:hover
+                    background-color: transparent
+                    color: $pink
+
+// home
+.home
+    margin: 50px 0
+    h2
+        font-size: 34px
+        font-weight: 700
+        color: $black
+        margin-bottom: 10px
+    p
+        font-size: 24px
+        font-weight: 600
+        color: $black
+    .main-wapper
+        .img-main
+            margin: 30px 0 0 0 
+            .img-holder
+                width: 100%
+                height: 200px
+                position: relative
+                background-color: $white
+                border: 1px solid rgba(217, 217, 217, 0.5)
+                border-radius: 8px 8px 0px 0px
+                img
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    +transform(translate(-50% , -50%))
+            .text
+                margin-top: 10px
+                border: 1px solid rgba(217, 217, 217, 0.5)
+                border-radius: 0px 0px 8px 8px
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1)
+                padding: 20px 40px
+                text-align: center
+                min-height: 105px
+                h3
+                    font-size: 24px
+                    font-weight: 600
+                    color: $black
+
+// transparency
+.transparency
+    position: relative
+    margin: 50px 0
+    .main-wapper
+        display: flex
+        gap: 20px
+        margin-top: 30px
+        .fig-holder
+            width: 726px
+            height: 621px
+            figure
+                position: absolute
+                left: 0
+                width: 737px
+                height: 621px
+                background-repeat: no-repeat
+                background-size: cover
+    .content-wapper
+        display: flex
+        flex-wrap: wrap
+        flex: 0 0 50%
+        .sub-holder
+            display: flex
+            gap: 20px
+            background-color: $new-bg
+            padding: 20px
+            border: 1px solid rgba(217, 217, 217, 0.5)
+            min-height: 300px
+            border-radius: 8px
+            margin-right: 20px 
+            margin-bottom: 20px
+            max-width: 393px
+            position: relative
+            .icon-holder
+                width: 100px
+                height: 100px
+                position: relative
+                img
+                    position: absolute
+            .text
+                h3
+                    font-size: 24px
+                    font-weight: 600
+                    color: $black
+                p
+                    font-size: 15px
+                    font-weight: 500
+                    color: $black
+                    span
+                        color: $light_blue
+                ul
+                    font-size: 15px
+                    font-weight: 500
+                    color: $black
+                    li
+                        margin-bottom: 10px
+                        span
+                            color: $light_blue
+                p.extra-p
+                    font-size: 15px
+                    font-weight: 600
+                    color: $input-black
+                    position: absolute
+                    left: 20px
+                    width: 97%
+                    margin-top: 30px
+                    bottom: 20px
+
+// sponsor
+.sponsor
+    .main-wapper-sec
+        .figure-holder
+            figure
+                width: 100%
+                height: 444px
+                background-position: center
+                background-size: cover
+                background-repeat: no-repeat
+                border-radius: 8px 0 0 8px
+        .content-wapper
+            padding-right: 5px
+            max-width: 935px
+            width: 100%
+            .wapper-text
+                h2
+                    margin-bottom: 30px
+                p
+                    font-size: 24px
+                    font-weight: 600
+                    color: $black
+                    margin-bottom: 20px
+            .register
+                display: flex
+                justify-content: end
+                margin-top: 50px
+                a
+                    background-color: $pink
+                    color: $white
+                    font-size: 16px
+                    font-weight: 400
+                    display: inline-block
+                    padding: 15px 40px
+                    border-radius: 8px
+                    +transition(0.3s)
+                    border: 1px solid $pink
+                    &:hover
+                        background-color: transparent
+                        color: $pink
+
+.sponsor-sec
+    margin: 50px 0
+    .main-wapper-sec
+        .figure-holder
+            figure
+                width: 100%
+                height: 444px
+                background-position: center
+                background-size: cover
+                background-repeat: no-repeat
+                border-radius: 0px 8px 8px 0px
+        .content-wapper
+            padding-right: 5px
+            max-width: 935px
+            width: 100%
+            .wapper-text
+                h2
+                    margin-bottom: 30px
+                p
+                    font-size: 24px
+                    font-weight: 600
+                    color: $black
+                    margin-bottom: 20px
+            .register
+                display: flex
+                justify-content: end
+                margin-top: 50px
+                a
+                    background-color: $pink
+                    color: $white
+                    font-size: 16px
+                    font-weight: 400
+                    display: inline-block
+                    padding: 15px 40px
+                    border-radius: 8px
+                    +transition(0.3s)
+                    border: 1px solid $pink
+                    &:hover
+                        background-color: transparent
+                        color: $pink
+
+// message
+.message
+    .main-wapper-sec
+        margin: 50px 0
+        .figure-holder
+            figure
+                width: 100%
+                height: 444px
+                background-position: center
+                background-size: cover
+                background-repeat: no-repeat     
+        .content-wapper
+            padding-right: 5px
+            max-width: 935px
+            width: 100%
+            position: relative
+            .wapper-text
+                position: absolute
+                left: 50%
+                top: 50%
+                +transform(translate(-50% , -50%))
+                width: 100%
+                ul
+                    color: $black
+                    font-size: 24px
+                    font-weight: 600
+                    li
+                        margin-bottom: 20px
+                .fig-holder
+                    width: 459px
+                    height: 190px
+                    position: relative
+                    left: 0
+                    right: 0
+                    margin: 0 auto
+                    figure
+                        width: 100%
+                        height: 190px
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: cover
+                .fig-holder-logo
+                    width: 182px
+                    height: 51px
+                    position: relative
+                    left: 0
+                    right: 0
+                    margin: 0 auto
+                    figure
+                        width: 100%
+                        height: 51px
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: cover
+                h2
+                    margin-bottom: 20px
+                    text-align: center
+                p
+                    font-size: 24px
+                    font-weight: 600
+                    color: $black
+                    margin-bottom: 20px
+            .register
+                display: flex
+                justify-content: end
+                margin-top: 50px
+                a
+                    background-color: $pink
+                    color: $white
+                    font-size: 16px
+                    font-weight: 400
+                    display: inline-block
+                    padding: 15px 40px
+                    border-radius: 8px
+                    +transition(0.3s)
+                    border: 1px solid $pink
+                    &:hover
+                        background-color: transparent
+                        color: $pink
+
+// table
+.table
+    .main-wapper
+        border: 1px solid $input-black
+        border-radius: 8px
+        .heading
+            background-color: $light_blue
+            padding: 15px 20px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            border-radius: 8px 8px 0px 0px
+            h2
+                font-size: 24px
+                color: $white
+            span
+                font-size: 15px
+                font-weight: 600
+                color: $yellow
+        .profile
+            padding: 0 20px
+            background-color: $new-bg
+            h5
+                font-weight: 600
+                font-size: 18px
+                color: $black
+            .wapper-sub
+                display: flex
+                align-items: center
+                gap: 239px
+                ul
+                    width: 20%
+                    font-size: 14px
+                    color: $input-black 
+                    li
+                        margin-bottom: 15px
+                        line-height: 1
+        .event-t
+            padding: 0 20px
+            background-color: $white
+            h5
+                font-weight: 600
+                font-size: 18px
+                color: $black
+            .wapper-sub
+                display: flex
+                align-items: center
+                gap: 239px
+                ul
+                    width: 20%
+                    font-size: 14px
+                    color: $input-black 
+                    li
+                        margin-bottom: 15px
+                        line-height: 1
+        .sponsor
+            padding: 0 20px
+            background-color: $new-bg
+            h5
+                font-weight: 600
+                font-size: 18px
+                color: $black
+            .wapper-sub
+                display: flex
+                align-items: center
+                gap: 239px
+                ul
+                    width: 20%
+                    font-size: 14px
+                    color: $input-black 
+                    li
+                        margin-bottom: 15px
+                        line-height: 1
+        .sec-btn
+            display: flex
+            justify-content: end
+            gap: 270px
+            margin: 30px 0 20px 0
+            a
+                background-color: $pink
+                display: inline-block
+                padding: 15px 30px
+                border: 1px solid $pink
+                +transition(0.3s)
+                border-radius: 8px
+                color: $white
+                font-size: 15px
+                font-weight: 500
+                &:hover
+                    background-color: transparent
+                    color: $pink
+            a.subscribe
+                background-color: $light_blue
+                border-color: $light_blue
+                &:hover
+                    background-color: transparent
+                    color: $light_blue
+
+
+.video-main
+    margin-top: 20px
+    .page-call
+        margin-bottom: 50px
+        ul
+            display: flex
+            gap: 20px
+            align-items: center
+            li
+                position: relative
+                a
+                    color: $input-black
+                    display: inline-block
+                    font-size: 15px
+                    font-weight: 500
+                    +transition(0.3s)
+                    &:hover
+                        color: $pink
+                &::after
+                    content: ""
+                    position: absolute
+                    width: 1px
+                    height: 15px
+                    background-color: $input-black
+                    right: -10px
+                    top: 6px
+                    opacity: 70%
+                &:last-child
+                    &::after
+                        display: none
+                &.active
+                    a
+                        color: $pink
+    .video-call-wapper
+        a
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 50px
+            .text
+                h3
+                    font-size: 24px
+                    font-weight: 600
+                    color: $black
+                    margin-top: 10px
+            .call-button
+                background-color: $light_blue
+                padding: 20px
+                color: $white
+                font-size: 15px
+                font-weight: 500
+                border-radius: 12px
+                .icon-wapper
+                    display: flex
+                    gap: 5px
+                    h6
+                        line-height: 1
+
+.main_filter
+    background-color: $new-bg
+    padding: 50px 0
+    h6
+        font-size: 18px
+        font-weight: 600
+        color: $black
+        text-align: center
+    .main_wapper
+        a.free
+            display: inline-block
+            background-color: $white
+            color: $pink
+            padding: 15px 45px
+            border-width: 1px 1px 0px 1px
+            border-style: solid
+            border-color: $icon_bg
+            border-radius: 8px 8px 0px 0px
+            position: relative
+            z-index: 2
+            bottom: -1px
+        .extra-text-top
+            text-align: center
+            span.show-case
+                display: inline-block
+                margin-top: 20px
+                font-size: 12px
+                font-weight: 500
+                color: $black
+                position: relative
+                &::after
+                    content: ""
+                    position: absolute
+                    width: 8px
+                    height: 8px
+                    background-image: url(../images/icon-info-extar.svg)
+                    background-repeat: no-repeat
+                    top: 8px
+                    right: -12px
+        .wapper_content
+            background-color: $white
+            padding: 30px
+            border: 1px solid $icon_bg
+            position: relative
+            z-index: 1
+            border-radius: 0px 8px 8px 8px
+            .radio-box
+                display: flex
+                gap: 30px
+                align-items: center
+                .wapper
+                    position: relative
+                    label
+                        font-size: 14px
+                        font-weight: 600
+                        color: $input-black
+                        position: relative
+                        padding-left: 25px
+                        &::before
+                            content: ""
+                            position: absolute
+                            width: 18px
+                            height: 18px
+                            display: block
+                            border: 1px solid $icon_bg
+                            +border-radius(100%)
+                            left: 0
+                            top: 5px
+                    input
+                        width: 100%
+                        height: 100%
+                        position: absolute
+                        opacity: 0
+                        visibility: hidden
+                        &:checked
+                            &+label
+                                &::before
+                                    border: 6px solid $black
+
+            ul.extra-list
+                font-size: 14px
+                font-weight: 600
+                color: $pink
+                margin-bottom: 20px
+                li
+                    &:first-child
+                        color: $black
+                        
+            h6
+                text-align: start
+                margin-bottom: 10px
+            p
+                font-size: 15px
+                font-weight: 600
+                color: $black
+                margin-bottom: 20px
+            h5
+                font-size: 18px
+                font-weight: 600
+                color: $black
+            .button
+                margin-top: 50px
+                ul
+                    display: flex
+                    justify-content: end
+                    align-items: center
+                    gap: 10px
+                    flex-wrap: wrap
+                    li
+                        a
+                            background-color: $white
+                            color: $pink
+                            border: 1px solid $pink
+                            display: inline-block
+                            padding: 10px 50px
+                            border-radius: 8px
+                            font-size: 16px
+                            font-weight: 500
+                            text-transform: uppercase
+                            +transition(0.3s)
+                            &:hover
+                                background-color: $pink
+                                color: $white
+            .main-content
+                background-color: $white-shde
+                padding: 20px
+                border-radius: 12px
+                position: relative
+                margin-bottom: 10px
+                a
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 16px
+                        height: 16px
+                        background-image: url(../images/Icon-Edit.svg)
+                        background-repeat: no-repeat
+                        right: 20px
+                        top: 20px
+                .icon-wapper
+                    display: flex
+                    line-height: 1
+                    gap: 5px
+                    h6
+                        margin-bottom: 5px
+                p
+                    font-size: 14px
+                    font-weight: 500
+                    color: $new-paragraph
+                    display: block
+                    margin-left: 20px
+                    margin-bottom: 0
+                span.extra-text
+                    font-size: 14px 
+                    font-weight: 500
+                    color: $black
+                    margin-left: 20px
+                .number-input
+                    .wapper
+                        padding-left: 20px
+                        border-top: 1px solid $icon_bg
+                        margin-top: 10px
+                        padding-top: 10px
+                        h5
+                            font-size: 14px
+                            font-weight: 500
+                            color: $black
+                            line-height: 17px
+                        span.number
+                            font-size: 14px
+                            font-weight: 500
+                            color: $new-paragraph
+                            display: block
+                        .main-flex
+                            display: flex
+                            gap: 20px
+                            align-items: center
+                        ul.day-input
+                            display: flex
+                            gap: 10px
+                            align-items: center
+                            margin-top: 5px
+                            li
+                                a
+                                    background-color: $pink
+                                    color: $white
+                                    padding: 5px 8px
+                                    border-radius: 100%
+                        ul.month-input
+                            display: flex
+                            align-items: center
+                            gap: 10px
+                            margin-top: 10px
+                            li
+                                a
+                                    background-color: $pink
+                                    color: $white
+                                    padding: 8px 14px
+                                    display: inline-block
+                                    border-radius: 24px
+                        .img-folder
+                            margin-bottom: 10px
+                            .img-holder
+                                display: flex
+                                gap: 10px
+                                figure
+                                    width: 90px
+                                    height: 50px
+                                    background-repeat: no-repeat
+                                    background-position: center
+                                    background-size: cover
+                                span.img-name
+                                    font-size: 14px
+                                    font-weight: 500
+                                    color: $new-paragraph
+                                    display: block
+                        &.event-picture
+                            border-top: none
+                            padding-top: 0
+                            margin-top: 5px
+                            position: relative
+                            .img-folder
+                                span.extra-text
+                                    margin-left: 5px
+                            span.line-extra
+                                content: ""
+                                position: absolute
+                                width: 1px
+                                height: 180px
+                                background-color: $icon_bg
+                                top: 0
+                                right: 0
+        .contact-form
+            .wapper
+                margin-bottom: 20px
+                .day
+                    ul.day-calender
+                        display: flex
+                        align-items: center
+                        font-size: 14px
+                        font-weight: 500
+                        color: $icon_bg
+                        gap: 10px
+                        margin-top: 15px
+                        li
+                            background-color: $white
+                            border: 1px solid $icon_bg
+                            padding: 0px 10px
+                            border-radius: 100%
+                .month
+                    margin-top: 20px
+                    ul
+                        display: flex
+                        align-items: center
+                        font-size: 14px
+                        font-weight: 500
+                        color: $icon_bg
+                        gap: 10px
+                        margin-top: 15px
+                        li
+                            background-color: $white
+                            border: 1px solid $icon_bg
+                            padding: 0px 10px
+                            border-radius: 24px
+                .icon-wapper
+                    display: flex
+                    justify-content: end
+                    align-items: center
+                    gap: 10px
+                    span.icon-add
+                        display: inline-block
+                        margin-top: -5px
+                label.evenet-calender-select
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 10px 20px
+                    position: relative
+                    select.form-select
+                        width: 100%
+                        border: 0
+                        outline: 0
+                        background-image: none
+                        padding: 0
+                        padding-left: 25px
+                        font-size: 14px
+                        font-weight: 500
+                        color: $input-black
+                        &:focus
+                            box-shadow: none
+                    &::after
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Category-calender.svg)
+                        width: 16px
+                        height: 16px
+                        top: 50%
+                        +transform(translateY(-50%))
+                    &::before
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Dropdown-new.svg)
+                        width: 12px
+                        height: 9px
+                        right: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                label.date-lable-caldender
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 10px 20px
+                    position: relative
+                    input
+                        width: 100%
+                        outline: 0
+                        padding-left: 25px
+                        color: $black
+                        font-size: 14px
+                        &::placeholder
+                            font-size: 14px
+                            color: $input-black
+                    &::after
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Start-Date.svg)
+                        width: 16px
+                        height: 14px
+                        background-repeat: no-repeat
+                        left: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                    &::before
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Date-calender.svg)
+                        width: 16px
+                        height: 14px
+                        background-repeat: no-repeat
+                        right: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                label.time-lable-caldender
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 10px 20px
+                    position: relative
+                    input
+                        width: 100%
+                        outline: 0
+                        padding-left: 25px
+                        color: $black
+                        font-size: 14px
+                        &::placeholder
+                            font-size: 14px
+                            color: $input-black
+                    &::after
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Start-Date.svg)
+                        width: 16px
+                        height: 14px
+                        background-repeat: no-repeat
+                        left: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                    &::before
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Time-calender.svg)
+                        width: 16px
+                        height: 16px
+                        background-repeat: no-repeat
+                        right: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+        .event-informain
+            .wapper 
+                margin-bottom: 20px
+                select
+                    width: 100%
+                    border: 0
+                    outline: 0
+                    background-image: none
+                    padding: 0
+                    padding-left: 25px
+                    font-size: 14px
+                    font-weight: 500
+                    color: $input-black
+                    &:focus
+                        box-shadow: none
+                h6
+                    font-size: 16px
+                    font-weight: 500
+                    color: $black
+                    span
+                        font-size: 14px
+                        font-weight: 500
+                        color: $input-black
+                label.event-name
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 10px 20px
+                    position: relative
+                    input
+                        width: 100%
+                        outline: 0
+                        padding-left: 25px
+                        color: $black
+                        font-size: 14px
+                        &::placeholder
+                            font-size: 14px
+                            color: $input-black
+                    &::after
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Category-calender.svg)
+                        width: 16px
+                        height: 16px
+                        background-repeat: no-repeat
+                        left: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                    select.form-select
+                        width: 100%
+                        border: 0
+                        outline: 0
+                        background-image: none
+                        padding: 0
+                        padding-left: 25px
+                        font-size: 14px
+                        font-weight: 500
+                        color: $input-black
+                        &:focus
+                            box-shadow: none
+                    &.for-select
+                        position: relative
+                        padding: 14px 20px
+                        &::before
+                            content: ""
+                            position: absolute
+                            background-image: url(../images/Icon-Dropdown-new.svg)
+                            width: 12px
+                            height: 9px
+                            right: 20px
+                            top: 50%
+                            transform: translateY(-50%)
+                label.event-name-number
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 10px 20px
+                    position: relative
+                    input
+                        width: 100%
+                        outline: 0
+                        padding-left: 25px
+                        color: $black
+                        font-size: 14px
+                        &::placeholder
+                            font-size: 14px
+                            color: $input-black
+                    &::after
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Participants.svg)
+                        width: 16px
+                        height: 16px
+                        background-repeat: no-repeat
+                        left: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                label.event-name-age
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 14px 20px
+                    position: relative
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 10.33px
+                        height: 16px
+                        background-image: url(../images/Icon-Minimum.svg)
+                        left: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                    &::before
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Dropdown-new.svg)
+                        width: 12px
+                        height: 9px
+                        right: 20px
+                        top: 50%
+                        transform: translateY(-50%)
+                label.event-name-age-max
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 14px 20px
+                    position: relative
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 10.33px
+                        height: 16px
+                        background-image: url(../images/Icon-Maximum.svg)
+                        left: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                    &::before
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Dropdown-new.svg)
+                        width: 12px
+                        height: 9px
+                        right: 20px
+                        top: 50%
+                        transform: translateY(-50%)
+                label.event-name-email
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 14px 20px
+                    position: relative
+                    input
+                        width: 100%
+                        outline: 0
+                        padding-left: 25px
+                        color: $black
+                        font-size: 14px
+                        &::placeholder
+                            font-size: 14px
+                            color: $input-black
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 16px
+                        height: 11.79px
+                        background-image: url(../images/Icon-Email-event.svg)
+                        left: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                label.event-name-phone
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 14px 20px
+                    position: relative
+                    input
+                        width: 100%
+                        outline: 0
+                        padding-left: 25px
+                        color: $black
+                        font-size: 14px
+                        &::placeholder
+                            font-size: 14px
+                            color: $input-black
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 16px
+                        height: 14px
+                        background-image: url(../images/Icon-Phone-call.svg)
+                        left: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                label.event-name-description
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 14px 20px
+                    position: relative
+                    input
+                        width: 100%
+                        outline: 0
+                        padding-left: 25px
+                        color: $black
+                        font-size: 14px
+                        &::placeholder
+                            font-size: 14px
+                            color: $input-black
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 14px
+                        height: 14px
+                        background-image: url(../images/Icon-Description-new.svg)
+                        left: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+        .main-button
+            text-align: center
+            margin: 100px 0
+            ul
+                display: flex
+                align-items: center
+                justify-content: center
+                gap: 10px
+                li
+                    a
+                        border: 1px solid $pink
+                        padding: 15px 45px
+                        display: inline-block
+                        color: $pink
+                        border-radius: 8px
+                        +transition(0.3s)
+                        &:hover
+                            background-color: $pink
+                            color: $white
+        .event-geuest
+            .wapper
+                h6
+                    font-size: 16px
+                    font-weight: 500
+                    color: $black  
+                label.date-label
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 12px 20px
+                    position: relative
+                    input
+                        width: 100%
+                        outline: 0
+                        border: 0
+                        input
+                        width: 100%
+                        outline: 0
+                        padding-left: 25px
+                        color: $black
+                        font-size: 14px
+                        &::placeholder
+                            font-size: 14px
+                            color: $input-black
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 16px
+                        height: 12px
+                        background-image: url(../images/Icon-Friends-new.svg)
+                        left: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                    &::before
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Date-calender.svg)
+                        width: 16px
+                        height: 14px
+                        background-repeat: no-repeat
+                        right: 20px
+                        top: 50%
+                        transform: translateY(-50%)
+                label.time-label
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 12px 20px
+                    position: relative
+                    input
+                        width: 100%
+                        outline: 0
+                        border: 0
+                        input
+                        width: 100%
+                        outline: 0
+                        padding-left: 25px
+                        color: $black
+                        font-size: 14px
+                        &::placeholder
+                            font-size: 14px
+                            color: $input-black
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 16px
+                        height: 12px
+                        background-image: url(../images/Icon-Friends-new.svg)
+                        left: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                    &::before
+                        content: ""
+                        position: absolute
+                        background-color: $white
+                        padding: 10px
+                        background-image: url(../images/Icon-Time-calender.svg)
+                        width: 16px
+                        height: 14px
+                        background-repeat: no-repeat
+                        right: 20px
+                        top: 50%
+                        transform: translateY(-50%)
+                label.friends-label
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 12px 20px
+                    position: relative
+                    input
+                        width: 100%
+                        outline: 0
+                        border: 0
+                        input
+                        width: 100%
+                        outline: 0
+                        padding-left: 25px
+                        color: $black
+                        font-size: 14px
+                        &::placeholder
+                            font-size: 14px
+                            color: $input-black
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 16px
+                        height: 12px
+                        background-image: url(../images/Icon-Friends-new.svg)
+                        left: 20px
+                        top: 50%
+                        +transform(translateY(-50%))
+                    &::before
+                        content: ""
+                        position: absolute
+                        background-color: $white
+                        background-image: url(../images/Icon-Search-new.svg)
+                        width: 20px
+                        height: 18px
+                        background-repeat: no-repeat
+                        right: 20px
+                        top: 50%
+                        transform: translateY(-50%)
+            .send-btn
+                display: flex
+                justify-content: end
+                margin-top: 50px
+                .send-btn-clss
+                    background-color: $pink
+                    padding: 10px 50px
+                    color: $white
+                    font-size: 16px
+                    font-weight: 500
+                    text-transform: uppercase 
+                    display: inline-block
+                    border-radius: 8px
+                    border: 1px solid $pink
+                    +transition(0.3s)
+                    &:hover
+                        background-color: transparent
+                        color: $pink
+            .or
+                text-align: center
+                position: relative
+                margin: 30px 0
+                span
+                    display: inline-block
+                    text-align: center
+                    background-color: $white
+                    color: $black
+                    text-transform: uppercase
+                    position: relative
+                    z-index: 2
+                    padding: 0 20px
+                &::after
+                    content: ""
+                    position: absolute
+                    width: 100%
+                    height: 1px
+                    top: 50%
+                    left: 0
+                    +transform(translateY(-50%))
+                    background-color: $icon_bg
+                    z-index: 1
+            .cuppon-code
+                position: relative
+                border-bottom: 1px solid $icon_bg
+                padding-bottom: 30px
+                margin-bottom: 30px
+                .text-up
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    position: relative
+                    margin-bottom: 20px
+                    a.share
+                        display: inline-block
+                        position: relative
+                        &::after
+                            content: ""
+                            position: absolute
+                            background-image: url(../images/Shareicon-new.svg)
+                            width: 30px
+                            height: 30px
+                            top: 50%
+                            right: 0px
+                            +transform(translateY(-50%))
+                    .cuppon-code-input
+                        input
+                            background-color: $new-bg
+                            padding: 10px 20px
+                            border-radius: 8px 0px 0px 8px
+                            color: $input-black
+                            min-width: 400px
+                            outline: 0
+                        a.cuppon-copy
+                            display: inline-block
+                            background-color: $pink
+                            color: $white
+                            text-transform: uppercase
+                            font-size: 16px
+                            font-weight: 500
+                            padding: 10px 20px
+                            border-radius: 0px 8px 8px 0px
+            .event-main-submit
+                text-align: center
+                a
+                    display: inline-block
+                    border: 1px solid $pink
+                    padding: 10px 15px
+                    color: $pink
+                    text-transform: uppercase
+                    border-radius: 8px
+                    +transition(0.3s)
+                    &:hover
+                        background-color: $pink
+                        color: $white
+        .event-paid-info
+            .wapper
+                .main-holder
+                    border-bottom: 1px solid $icon_bg
+                    .figure-holder
+                        figure
+                            width: 100%
+                            height: 300px
+                            background-size: cover
+                            background-repeat: no-repeat
+                            background-position: center
+                    .text
+                        margin-top: 20px
+                        h3
+                            font-size: 16px
+                            font-weight: 600
+                            color: $black
+                            margin-bottom: 5px
+                            line-height: 1
+                        p
+                            font-size: 14px
+                            font-weight: 500
+                            color: $new-paragraph
+                .event-dtl-text
+                    margin-top: 10px
+                    h3
+                        font-size: 16px
+                        font-weight: 600
+                        color: $black
+                        margin-bottom: 5px
+                    p
+                        font-size: 14px
+                        color: $new-paragraph
+                        margin-bottom: 10px
+                    .input-sec
+                        span
+                            font-size: 16px
+                            font-weight: 600
+                            color: $black
+                            display: inline-block
+                            margin-bottom: 10px
+                        label
+                            width: 100%
+                            border-radius: 24px
+                            border: 1px solid $icon_bg
+                            padding: 12px 20px
+                            position: relative
+                            input
+                                width: 100%
+                                outline: 0
+                                border: 0
+                                input
+                                width: 100%
+                                outline: 0
+                                padding-left: 25px
+                                color: $black
+                                font-size: 14px
+                                &::placeholder
+                                    font-size: 14px
+                                    color: $input-black
+                            &::after
+                                content: ""
+                                position: absolute
+                                width: 14px
+                                height: 14px
+                                background-image: url(../images/Icon-Informations-black.svg)
+                                left: 20px
+                                top: 50%
+                                +transform(translateY(-50%))
+            .event-main-submit
+                text-align: center
+                margin-top: 30px
+                h3
+                    font-size: 18px
+                    font-weight: 600
+                    color: $black
+                    margin-bottom: 30px
+                a
+                    display: inline-block
+                    border: 1px solid $pink
+                    padding: 10px 15px
+                    color: $pink
+                    text-transform: uppercase
+                    border-radius: 8px
+                    transition: 0.3s
+        .adult-sec , .childs-sec , .groups-sec
+            border-bottom: 1px solid $icon_bg
+            margin-top: 30px
+            h3
+                font-size: 18px
+                font-weight: 600
+                color: $light_blue
+                margin-bottom: 10px
+            .input-sec
+                .wapper
+                    margin-bottom: 20px
+                    h5
+                        font-size: 16px
+                        font-weight: 600
+                        color: $black
+                        margin-bottom: 10px
+                        line-height: 1
+                        span
+                            color: $new-paragraph
+                    span.extra-text
+                        display: inline-block
+                        font-size: 14px
+                        font-weight: 500
+                        color: $black
+                        margin-top: 10px
+                    label.select-box
+                        width: 100%
+                        border-radius: 24px
+                        border: 1px solid $icon_bg
+                        padding: 12px 20px
+                        position: relative
+                        select.form-select
+                            width: 100%
+                            padding: 0
+                            background-image: none
+                            border: 0
+                            outline: 0
+                            box-shadow: none
+                            font-size: 14px
+                            font-weight: 500
+                            color: $input-black
+                        &::after
+                            content: ""
+                            position: absolute
+                            background-image: url(../images/Icon-Dropdown-new.svg)
+                            width: 12px
+                            height: 9px
+                            right: 20px
+                            top: 50%
+                            transform: translateY(-50%)
+                    label.fare-box
+                        width: 100%
+                        border-radius: 24px
+                        border: 1px solid $icon_bg
+                        padding: 12px 20px
+                        position: relative
+                        input
+                            width: 100%
+                            outline: 0
+                            padding-left: 25px
+                            color: $black
+                            font-size: 14px
+                            &::placeholder
+                                font-size: 14px
+                                color: $input-black
+                        &::after
+                            content: ""
+                            position: absolute
+                            background-image: url(../images/icon-adule-01.svg)
+                            width: 13px
+                            height: 14px
+                            left: 20px
+                            top: 50%
+                            transform: translateY(-50%)
+                    label.seeling-price
+                        width: 100%
+                        border-radius: 24px
+                        border: 1px solid $icon_bg
+                        padding: 12px 20px
+                        position: relative
+                        input
+                            width: 100%
+                            outline: 0
+                            padding-left: 25px
+                            color: $black
+                            font-size: 14px
+                            &::placeholder
+                                font-size: 14px
+                                color: $input-black
+                        &::after
+                            content: ""
+                            position: absolute
+                            background-image: url(../images/icon-euro.svg)
+                            width: 13px
+                            height: 14px
+                            left: 20px
+                            top: 50%
+                            transform: translateY(-50%)
+                    label.percentege
+                        width: 100%
+                        border-radius: 24px
+                        border: 1px solid $icon_bg
+                        padding: 12px 20px
+                        position: relative
+                        input
+                            width: 100%
+                            outline: 0
+                            padding-left: 25px
+                            color: $black
+                            font-size: 14px
+                            &::placeholder
+                                font-size: 14px
+                                color: $input-black
+                        &::after
+                            content: ""
+                            position: absolute
+                            background-image: url(../images/Icon-Percentage.svg)
+                            width: 15px
+                            height: 16px
+                            left: 20px
+                            top: 50%
+                            transform: translateY(-50%)
+            &.groups-sec
+                border-bottom: 0
+        .upload-sec-input
+            .wapper
+                .extra-text
+                    font-size: 12px
+                    font-weight: 500
+                    color: $input-black
+                    display: block
+                    text-align: right
+                    margin-top: 10px
+                    line-height: 1
+                label.upload-picture
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 10px 40px
+                    position: relative
+                    z-index: 1
+                    font-size: 14px
+                    font-weight: 500
+                    color: $input-black
+                    input
+                        width: 100%
+                        position: absolute
+                        left: 0
+                        opacity: 0
+                        z-index: 2
+                    &::after
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Main-Picture.svg)
+                        width: 14px
+                        height: 11px
+                        left: 20px
+                        top: 50%
+                        transform: translateY(-50%)
+                    &::before
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Upload.svg)
+                        width: 14px
+                        height: 14px
+                        right: 20px
+                        top: 50%
+                        transform: translateY(-50%)
+        .event_address
+            .wapper
+                h5
+                    font-size: 16px
+                    font-weight: 600
+                    color: $black
+                    margin-bottom: 10px
+                    line-height: 1
+                .upload
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 10px 40px
+                    position: relative
+                    z-index: 1
+                    font-size: 14px
+                    font-weight: 500
+                    color: $input-black
+                    input
+                        width: 100%
+                        outline: 0
+                        color: $black
+                        font-size: 14px
+                    &::after
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Address-new.svg)
+                        width: 16px
+                        height: 14px
+                        left: 20px
+                        top: 50%
+                        transform: translateY(-50%)
+                .upload-info
+                    width: 100%
+                    border-radius: 24px
+                    border: 1px solid $icon_bg
+                    padding: 10px 40px
+                    position: relative
+                    z-index: 1
+                    font-size: 14px
+                    font-weight: 500
+                    color: $input-black
+                    input
+                        width: 100%
+                        outline: 0
+                        color: $black
+                        font-size: 14px
+                    &::after
+                        content: ""
+                        position: absolute
+                        background-image: url(../images/Icon-Informations-black.svg)
+                        width: 16px
+                        height: 14px
+                        left: 20px
+                        top: 50%
+                        transform: translateY(-50%)
+
+
+                        
+
+                            
+
+
+                            
+                        
+
+
+                    
+                            
+                            
+                                            
+
+                            
+
+                
+
+                
+
+                        
+            
+
+
+
+
